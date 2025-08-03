@@ -1,8 +1,12 @@
 #include "CServer.h"
 
+
 int main(){
+   ConfigMgr gCfgMgr;
+   std::string gate_p = gCfgMgr["GateServer"]["Port"];
+   std::cout << gate_p.c_str() << std::endl;
+   unsigned short port = atoi(gate_p.c_str());
    try{
-      unsigned short port= 9987;
       net::io_context ioc;
       boost::asio::signal_set signals(ioc, SIGINT, SIGTERM);
       signals.async_wait([&ioc](const boost::system::error_code &ec, int signal_number){

@@ -1,6 +1,7 @@
 
 #include "LogicSystem.h"
 #include "HttpConnection.h"
+#include "VerifyGrpcClient.h"
 
 void LogicSystem::RegGet(std::string url, HttpHandler handler)
 {
@@ -54,6 +55,8 @@ LogicSystem::LogicSystem()
       }
 
       auto email = src_root["email"].asString();
+      GetVarifyRsp rep = VerifyGrpcClient::GetInstance()->GetVarifyCode(email);
+
       std::cout << "receive email is: " << email << std::endl;
 
       root["error"] = 0;

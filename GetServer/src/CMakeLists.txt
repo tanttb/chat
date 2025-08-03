@@ -5,15 +5,29 @@ project(chat VERSION 1.0)
 
 
 set(CMAKE_CXX_STANDARD 20)
-find_package(Boost REQUIRED COMPONENTS system)
+set(PROTO_FILE "${CMAKE_CURRENT_SOURCE_DIR}/../include/message.proto")
+find_package(Boost 1.71.0 REQUIRED COMPONENTS filesystem system)
 find_package(Boost REQUIRED COMPONENTS json)
 find_package(jsoncpp REQUIRED)
+find_package(Protobuf REQUIRED)
+find_package(gRPC REQUIRED)
 
 include_directories(.)
 include_directories(../include)
 
-aux_source_directory(. SRC_LIST)
-add_executable(chat ${SRC_LIST})
+protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${PROTO_FILE})
 
-target_link_libraries(chat PRIVATE Boost::boost Boost::json Boost::system)
+aux_source_directory(. SRC_LIST)
+add_executable(chat ${SRC_LIST} ${PROTO_SRCS} ${PROTO_HDRS})
+
+target_link_libraries(chat PRIVATE Boost::boost Boost::json Boost::system Boost::filesystem)
 target_link_libraries(chat PRIVATE jsoncpp_lib)
+target_link_libraries(chat PRIVATE ${Protobuf_LIBRARIES})
+target_link_libraries(chat PRIVATE
+    gRPC::grpc++
+    gRPC::grpc
+    gRPC::grpc++_reflection
+    ${Protobuf_LIBRARIES}
+    pthread
+    dl
+)
