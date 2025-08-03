@@ -1,0 +1,3 @@
+/home/tan/chat/GetServer/build/CMakeFiles/chat.dir
+/home/tan/chat/GetServer/build/CMakeFiles/edit_cache.dir
+/home/tan/chat/GetServer/build/CMakeFiles/rebuild_cache.dir
