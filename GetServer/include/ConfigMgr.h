@@ -47,7 +47,10 @@ class ConfigMgr{
          _config_datas.clear();
       }
 
-      ConfigMgr();
+      static ConfigMgr& Instance(){
+         static ConfigMgr cfg_mgr;
+         return cfg_mgr;
+      }
    
    SectionInfo operator[](const std::string & key){
       if(_config_datas.find(key) != _config_datas.end()){
@@ -57,5 +60,6 @@ class ConfigMgr{
       }
    }
    private:
+      ConfigMgr();
       std::map<std::string, SectionInfo> _config_datas;
 };

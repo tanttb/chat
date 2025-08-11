@@ -2,8 +2,7 @@
 
 
 int main(){
-   ConfigMgr gCfgMgr;
-   std::string gate_p = gCfgMgr["GateServer"]["Port"];
+   std::string gate_p = ConfigMgr::Instance()["GateServer"]["Port"];
    std::cout << gate_p.c_str() << std::endl;
    unsigned short port = atoi(gate_p.c_str());
    try{

@@ -1,7 +1,7 @@
 #include "HttpConnection.h"
 
 //socket没有拷贝构造
-HttpConnection::HttpConnection(tcp::socket sock): _socket(std::move(sock))
+HttpConnection::HttpConnection(boost::asio::io_context &ioc): _socket(ioc)
 {
    
 }

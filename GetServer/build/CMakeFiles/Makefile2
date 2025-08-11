@@ -81,12 +81,12 @@ clean: CMakeFiles/chat.dir/clean
 CMakeFiles/chat.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target chat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10 "Built target chat"
 .PHONY : CMakeFiles/chat.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/chat.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tan/chat/GetServer/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tan/chat/GetServer/build/CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/chat.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/tan/chat/GetServer/build/CMakeFiles 0
 .PHONY : CMakeFiles/chat.dir/rule

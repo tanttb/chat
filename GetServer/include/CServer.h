@@ -12,6 +12,5 @@ class CServer : public std::enable_shared_from_this<CServer>{
    private:
       net::io_context &_ioc;
       tcp::acceptor _acceptor;
-      tcp::socket _socket;
       unsigned short _port;
 }; 

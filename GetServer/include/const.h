@@ -15,6 +15,10 @@
 #include <jsoncpp/json/json.h>
 #include <jsoncpp/json/value.h>
 #include <jsoncpp/json/reader.h>
+#include <atomic>
+#include <queue>
+#include <mutex>
+#include <condition_variable>
 
 #include "utils.h"
 #include "Singleton.h"
@@ -30,6 +34,3 @@ enum ErrorCodes{
    Error_Json = 1001,
    RPCFailed = 1002
 };
-
-class ConfigMgr;
-extern ConfigMgr gCfgMgr;

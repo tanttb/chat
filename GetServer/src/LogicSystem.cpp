@@ -55,11 +55,11 @@ LogicSystem::LogicSystem()
       }
 
       auto email = src_root["email"].asString();
-      GetVarifyRsp rep = VerifyGrpcClient::GetInstance()->GetVarifyCode(email);
-
+      GetVarifyRsp rsp = VerifyGrpcClient::GetInstance()->GetVarifyCode(email);
+                     
       std::cout << "receive email is: " << email << std::endl;
 
-      root["error"] = 0;
+      root["error"] = rsp.error();
       root["email"] = src_root["email"];
       std::string jsonstr = root.toStyledString();
       beast::ostream(connection->_response.body()) << jsonstr;

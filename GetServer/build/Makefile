@@ -129,6 +129,30 @@ chat/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/build
 .PHONY : chat/fast
 
+AsioIOServicePool.o: AsioIOServicePool.cpp.o
+.PHONY : AsioIOServicePool.o
+
+# target to build an object file
+AsioIOServicePool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/AsioIOServicePool.cpp.o
+.PHONY : AsioIOServicePool.cpp.o
+
+AsioIOServicePool.i: AsioIOServicePool.cpp.i
+.PHONY : AsioIOServicePool.i
+
+# target to preprocess a source file
+AsioIOServicePool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/AsioIOServicePool.cpp.i
+.PHONY : AsioIOServicePool.cpp.i
+
+AsioIOServicePool.s: AsioIOServicePool.cpp.s
+.PHONY : AsioIOServicePool.s
+
+# target to generate assembly for a file
+AsioIOServicePool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/AsioIOServicePool.cpp.s
+.PHONY : AsioIOServicePool.cpp.s
+
 CServer.o: CServer.cpp.o
 .PHONY : CServer.o
 
@@ -152,6 +176,30 @@ CServer.s: CServer.cpp.s
 CServer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/CServer.cpp.s
 .PHONY : CServer.cpp.s
+
+ConfigMgr.o: ConfigMgr.cpp.o
+.PHONY : ConfigMgr.o
+
+# target to build an object file
+ConfigMgr.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/ConfigMgr.cpp.o
+.PHONY : ConfigMgr.cpp.o
+
+ConfigMgr.i: ConfigMgr.cpp.i
+.PHONY : ConfigMgr.i
+
+# target to preprocess a source file
+ConfigMgr.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/ConfigMgr.cpp.i
+.PHONY : ConfigMgr.cpp.i
+
+ConfigMgr.s: ConfigMgr.cpp.s
+.PHONY : ConfigMgr.s
+
+# target to generate assembly for a file
+ConfigMgr.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/ConfigMgr.cpp.s
+.PHONY : ConfigMgr.cpp.s
 
 HttpConnection.o: HttpConnection.cpp.o
 .PHONY : HttpConnection.o
@@ -225,6 +273,54 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+message.grpc.pb.o: message.grpc.pb.cc.o
+.PHONY : message.grpc.pb.o
+
+# target to build an object file
+message.grpc.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/message.grpc.pb.cc.o
+.PHONY : message.grpc.pb.cc.o
+
+message.grpc.pb.i: message.grpc.pb.cc.i
+.PHONY : message.grpc.pb.i
+
+# target to preprocess a source file
+message.grpc.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/message.grpc.pb.cc.i
+.PHONY : message.grpc.pb.cc.i
+
+message.grpc.pb.s: message.grpc.pb.cc.s
+.PHONY : message.grpc.pb.s
+
+# target to generate assembly for a file
+message.grpc.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/message.grpc.pb.cc.s
+.PHONY : message.grpc.pb.cc.s
+
+message.pb.o: message.pb.cc.o
+.PHONY : message.pb.o
+
+# target to build an object file
+message.pb.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/message.pb.cc.o
+.PHONY : message.pb.cc.o
+
+message.pb.i: message.pb.cc.i
+.PHONY : message.pb.i
+
+# target to preprocess a source file
+message.pb.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/message.pb.cc.i
+.PHONY : message.pb.cc.i
+
+message.pb.s: message.pb.cc.s
+.PHONY : message.pb.s
+
+# target to generate assembly for a file
+message.pb.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/message.pb.cc.s
+.PHONY : message.pb.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -234,9 +330,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... chat"
+	@echo "... AsioIOServicePool.o"
+	@echo "... AsioIOServicePool.i"
+	@echo "... AsioIOServicePool.s"
 	@echo "... CServer.o"
 	@echo "... CServer.i"
 	@echo "... CServer.s"
+	@echo "... ConfigMgr.o"
+	@echo "... ConfigMgr.i"
+	@echo "... ConfigMgr.s"
 	@echo "... HttpConnection.o"
 	@echo "... HttpConnection.i"
 	@echo "... HttpConnection.s"
@@ -246,6 +348,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... message.grpc.pb.o"
+	@echo "... message.grpc.pb.i"
+	@echo "... message.grpc.pb.s"
+	@echo "... message.pb.o"
+	@echo "... message.pb.i"
+	@echo "... message.pb.s"
 .PHONY : help
 
 
