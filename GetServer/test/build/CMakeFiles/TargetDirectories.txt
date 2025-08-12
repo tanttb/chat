@@ -1,4 +1,3 @@
-/home/tan/GetServer/test/build/CMakeFiles/server.dir
-/home/tan/GetServer/test/build/CMakeFiles/client.dir
-/home/tan/GetServer/test/build/CMakeFiles/edit_cache.dir
-/home/tan/GetServer/test/build/CMakeFiles/rebuild_cache.dir
+/home/tan/chat/GetServer/test/build/CMakeFiles/redis.dir
+/home/tan/chat/GetServer/test/build/CMakeFiles/edit_cache.dir
+/home/tan/chat/GetServer/test/build/CMakeFiles/rebuild_cache.dir

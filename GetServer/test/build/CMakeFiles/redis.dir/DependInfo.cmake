@@ -8,9 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/tan/GetServer/test/helloworld.grpc.pb.cc" "CMakeFiles/server.dir/helloworld.grpc.pb.cc.o" "gcc" "CMakeFiles/server.dir/helloworld.grpc.pb.cc.o.d"
-  "/home/tan/GetServer/test/helloworld.pb.cc" "CMakeFiles/server.dir/helloworld.pb.cc.o" "gcc" "CMakeFiles/server.dir/helloworld.pb.cc.o.d"
-  "/home/tan/GetServer/test/server.cpp" "CMakeFiles/server.dir/server.cpp.o" "gcc" "CMakeFiles/server.dir/server.cpp.o.d"
+  "/home/tan/chat/GetServer/test/client.cpp" "CMakeFiles/redis.dir/client.cpp.o" "gcc" "CMakeFiles/redis.dir/client.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

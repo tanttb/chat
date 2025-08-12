@@ -11,9 +11,12 @@ find_package(Boost REQUIRED COMPONENTS json)
 find_package(jsoncpp REQUIRED)
 find_package(Protobuf REQUIRED)
 find_package(gRPC REQUIRED)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(HIREDIS REQUIRED hiredis)
 
 include_directories(.)
 include_directories(../include)
+include_directories(${HIREDIS_INCLUDE_DIRS})
 
 protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${PROTO_FILE})
 
@@ -23,6 +26,7 @@ add_executable(chat ${SRC_LIST} ${PROTO_SRCS} ${PROTO_HDRS})
 target_link_libraries(chat PRIVATE Boost::boost Boost::json Boost::system Boost::filesystem)
 target_link_libraries(chat PRIVATE jsoncpp_lib)
 target_link_libraries(chat PRIVATE ${Protobuf_LIBRARIES})
+target_link_libraries(chat PRIVATE ${HIREDIS_LIBRARIES})
 target_link_libraries(chat PRIVATE
     gRPC::grpc++
     gRPC::grpc

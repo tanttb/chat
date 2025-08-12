@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/usr/include/hiredis
 
-CXX_FLAGS = -pthread
+CXX_FLAGS = 
 

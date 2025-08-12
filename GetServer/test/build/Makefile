@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tan/GetServer/test
+CMAKE_SOURCE_DIR = /home/tan/chat/GetServer/test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tan/GetServer/test/build
+CMAKE_BINARY_DIR = /home/tan/chat/GetServer/test/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tan/GetServer/test/build/CMakeFiles /home/tan/GetServer/test/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tan/chat/GetServer/test/build/CMakeFiles /home/tan/chat/GetServer/test/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tan/GetServer/test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tan/chat/GetServer/test/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,37 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named server
+# Target rules for targets named redis
 
 # Build rule for target.
-server: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
-.PHONY : server
+redis: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 redis
+.PHONY : redis
 
 # fast build rule for target.
-server/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
-.PHONY : server/fast
-
-#=============================================================================
-# Target rules for targets named client
-
-# Build rule for target.
-client: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client
-.PHONY : client
-
-# fast build rule for target.
-client/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
-.PHONY : client/fast
+redis/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redis.dir/build.make CMakeFiles/redis.dir/build
+.PHONY : redis/fast
 
 client.o: client.cpp.o
 .PHONY : client.o
 
 # target to build an object file
 client.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redis.dir/build.make CMakeFiles/redis.dir/client.cpp.o
 .PHONY : client.cpp.o
 
 client.i: client.cpp.i
@@ -155,7 +142,7 @@ client.i: client.cpp.i
 
 # target to preprocess a source file
 client.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redis.dir/build.make CMakeFiles/redis.dir/client.cpp.i
 .PHONY : client.cpp.i
 
 client.s: client.cpp.s
@@ -163,86 +150,8 @@ client.s: client.cpp.s
 
 # target to generate assembly for a file
 client.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/redis.dir/build.make CMakeFiles/redis.dir/client.cpp.s
 .PHONY : client.cpp.s
-
-helloworld.grpc.pb.o: helloworld.grpc.pb.cc.o
-.PHONY : helloworld.grpc.pb.o
-
-# target to build an object file
-helloworld.grpc.pb.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/helloworld.grpc.pb.cc.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/helloworld.grpc.pb.cc.o
-.PHONY : helloworld.grpc.pb.cc.o
-
-helloworld.grpc.pb.i: helloworld.grpc.pb.cc.i
-.PHONY : helloworld.grpc.pb.i
-
-# target to preprocess a source file
-helloworld.grpc.pb.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/helloworld.grpc.pb.cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/helloworld.grpc.pb.cc.i
-.PHONY : helloworld.grpc.pb.cc.i
-
-helloworld.grpc.pb.s: helloworld.grpc.pb.cc.s
-.PHONY : helloworld.grpc.pb.s
-
-# target to generate assembly for a file
-helloworld.grpc.pb.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/helloworld.grpc.pb.cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/helloworld.grpc.pb.cc.s
-.PHONY : helloworld.grpc.pb.cc.s
-
-helloworld.pb.o: helloworld.pb.cc.o
-.PHONY : helloworld.pb.o
-
-# target to build an object file
-helloworld.pb.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/helloworld.pb.cc.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/helloworld.pb.cc.o
-.PHONY : helloworld.pb.cc.o
-
-helloworld.pb.i: helloworld.pb.cc.i
-.PHONY : helloworld.pb.i
-
-# target to preprocess a source file
-helloworld.pb.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/helloworld.pb.cc.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/helloworld.pb.cc.i
-.PHONY : helloworld.pb.cc.i
-
-helloworld.pb.s: helloworld.pb.cc.s
-.PHONY : helloworld.pb.s
-
-# target to generate assembly for a file
-helloworld.pb.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/helloworld.pb.cc.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/helloworld.pb.cc.s
-.PHONY : helloworld.pb.cc.s
-
-server.o: server.cpp.o
-.PHONY : server.o
-
-# target to build an object file
-server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cpp.o
-.PHONY : server.cpp.o
-
-server.i: server.cpp.i
-.PHONY : server.i
-
-# target to preprocess a source file
-server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cpp.i
-.PHONY : server.cpp.i
-
-server.s: server.cpp.s
-.PHONY : server.s
-
-# target to generate assembly for a file
-server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.cpp.s
-.PHONY : server.cpp.s
 
 # Help Target
 help:
@@ -252,20 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... client"
-	@echo "... server"
+	@echo "... redis"
 	@echo "... client.o"
 	@echo "... client.i"
 	@echo "... client.s"
-	@echo "... helloworld.grpc.pb.o"
-	@echo "... helloworld.grpc.pb.i"
-	@echo "... helloworld.grpc.pb.s"
-	@echo "... helloworld.pb.o"
-	@echo "... helloworld.pb.i"
-	@echo "... helloworld.pb.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
 .PHONY : help
 
 
