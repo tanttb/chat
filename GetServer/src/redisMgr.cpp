@@ -1,43 +1,4 @@
-#include <iostream>
-#include <hiredis/hiredis.h>
-#include <chrono>
-#include <vector>
-#include <assert.h>
-#include <string.h>
-
-namespace Color {
-    const std::string RED = "\033[31m";
-    const std::string GREEN = "\033[32m";
-    const std::string YELLOW = "\033[33m";
-    const std::string BLUE = "\033[34m";
-    const std::string RESET = "\033[0m";
-}
-
-#define LOG_INFO(info)  {std::cout << Color::GREEN << "[INFO ]: " << info << Color::RESET <<std::endl;}
-#define LOG_ERROR(info) {std::cout << Color::RED <<"[ERROR]: " << info << Color::RESET <<std::endl;}
-
-class RedisMgr{
-   public:
-      
-      bool Connect(const std::string &host, const int port);
-      bool Get(const std::string &key, std::string &val);
-      bool Set(const std::string &key, const std::string &val);
-      bool Auth(const std::string &passwd);
-      bool LPush(const std::string &key, const std::string &val);
-      bool LPop(const std::string &key, std::string& value);
-      bool RPush(const std::string& key, const std::string& value);
-      bool RPop(const std::string& key, std::string& value);
-      bool HSet(const std::string &key, const std::string &hkey, const std::string &value);
-      bool HSet(const char* key, const char* hkey, const char* hvalue, size_t hvaluelen);
-      bool Del(const std::string &key);
-      bool ExistsKey(const std::string &key);
-      std::string HGet(const std::string &key, const std::string &hkey);
-      void Colse();
-
-      RedisMgr();
-      redisContext *_connect = nullptr;
-      redisReply *_reply = nullptr;
-};
+#include "redisMgr.h"
 
 RedisMgr::RedisMgr()
 {
@@ -273,33 +234,9 @@ std::string RedisMgr::HGet(const std::string &key, const std::string &hkey)
    return value;
 }
 
-void RedisMgr::Colse()
+void RedisMgr::Close()
 {
    redisFree(_connect);
 }
 
-int main() {
-    RedisMgr* a = new RedisMgr;
-    assert(a->Connect("127.0.0.1", 6379));
-    assert(a->Auth("123456"));
-    assert(a->Set("blogwebsite","llfc.club"));
-    std::string value="";
-    assert(a->Get("blogwebsite", value) );
-    assert(a->Get("nonekey", value) == false);
-    assert(a->HSet("bloginfo","blogwebsite", "llfc.club"));
-    assert(a->HGet("bloginfo","blogwebsite") != "");
-    assert(a->ExistsKey("bloginfo"));
-    assert(a->Del("bloginfo"));
-    assert(a->Del("bloginfo"));
-    assert(a->ExistsKey("bloginfo") == false);
-    assert(a->LPush("lpushkey1", "lpushvalue1"));
-    assert(a->LPush("lpushkey1", "lpushvalue2"));
-    assert(a->LPush("lpushkey1", "lpushvalue3"));
-    assert(a->RPop("lpushkey1", value));
-    assert(a->RPop("lpushkey1", value));
-    assert(a->LPop("lpushkey1", value));
-    assert(a->LPop("lpushkey2", value)==false);
-    a->Colse();
-    delete a;
-}
 

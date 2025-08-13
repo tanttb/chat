@@ -19,6 +19,7 @@
 #include <queue>
 #include <mutex>
 #include <condition_variable>
+#include <hiredis/hiredis.h>
 
 #include "utils.h"
 #include "Singleton.h"
@@ -34,3 +35,14 @@ enum ErrorCodes{
    Error_Json = 1001,
    RPCFailed = 1002
 };
+
+namespace Color {
+    const std::string RED = "\033[31m";
+    const std::string GREEN = "\033[32m";
+    const std::string YELLOW = "\033[33m";
+    const std::string BLUE = "\033[34m";
+    const std::string RESET = "\033[0m";
+}
+
+#define LOG_INFO(info)  {std::cout << Color::GREEN << "[INFO ]: " << info << Color::RESET <<std::endl;}
+#define LOG_ERROR(info) {std::cout << Color::RED <<"[ERROR]: " << info << Color::RESET <<std::endl;}
