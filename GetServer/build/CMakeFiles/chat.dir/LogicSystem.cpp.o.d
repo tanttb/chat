@@ -2125,7 +2125,9 @@ CMakeFiles/chat.dir/LogicSystem.cpp.o: \
  /usr/include/c++/13/stack /usr/include/c++/13/bits/stl_stack.h \
  /usr/include/jsoncpp/json/writer.h /usr/include/jsoncpp/json/value.h \
  /usr/include/jsoncpp/json/reader.h /usr/include/c++/13/queue \
- /usr/include/c++/13/bits/stl_queue.h \
+ /usr/include/c++/13/bits/stl_queue.h /usr/include/hiredis/hiredis.h \
+ /usr/include/hiredis/read.h /usr/include/hiredis/sds.h \
+ /usr/include/hiredis/alloc.h \
  /home/tan/chat/GetServer/src/../include/utils.h \
  /home/tan/chat/GetServer/src/../include/Singleton.h \
  /home/tan/chat/GetServer/src/../include/ConfigMgr.h \
@@ -2323,4 +2325,21 @@ CMakeFiles/chat.dir/LogicSystem.cpp.o: \
  /usr/include/grpcpp/impl/codegen/proto_buffer_writer.h \
  /usr/include/grpcpp/support/proto_buffer_writer.h \
  /usr/include/grpcpp/impl/codegen/serialization_traits.h \
- /usr/include/grpcpp/support/stub_options.h
+ /usr/include/grpcpp/support/stub_options.h \
+ /home/tan/chat/GetServer/src/../include/redisMgr.h \
+ /home/tan/chat/GetServer/src/../include/MysqlMgr.h \
+ /home/tan/chat/GetServer/src/../include/MysqlPool.h \
+ /usr/include/c++/13/thread /usr/include/mysql_driver.h \
+ /usr/include/boost/scoped_ptr.hpp \
+ /usr/include/boost/smart_ptr/scoped_ptr.hpp \
+ /usr/include/cppconn/driver.h /usr/include/cppconn/connection.h \
+ /usr/include/cppconn/build_config.h /usr/include/cppconn/warning.h \
+ /usr/include/cppconn/sqlstring.h /usr/include/cppconn/variant.h \
+ /usr/include/cppconn/exception.h /usr/include/mysql_connection.h \
+ /usr/include/cppconn/connection.h \
+ /usr/include/cppconn/prepared_statement.h \
+ /usr/include/cppconn/statement.h /usr/include/cppconn/config.h \
+ /usr/include/inttypes.h /usr/include/cppconn/resultset.h \
+ /usr/include/cppconn/resultset_metadata.h \
+ /usr/include/cppconn/datatype.h /usr/include/cppconn/resultset.h \
+ /usr/include/cppconn/statement.h /usr/include/cppconn/exception.h

@@ -2125,7 +2125,10 @@ CMakeFiles/chat.dir/main.cpp.o: /home/tan/chat/GetServer/src/main.cpp \
  /usr/include/c++/13/stack /usr/include/c++/13/bits/stl_stack.h \
  /usr/include/jsoncpp/json/writer.h /usr/include/jsoncpp/json/value.h \
  /usr/include/jsoncpp/json/reader.h /usr/include/c++/13/queue \
- /usr/include/c++/13/bits/stl_queue.h \
+ /usr/include/c++/13/bits/stl_queue.h /usr/include/hiredis/hiredis.h \
+ /usr/include/hiredis/read.h /usr/include/hiredis/sds.h \
+ /usr/include/hiredis/alloc.h \
  /home/tan/chat/GetServer/src/../include/utils.h \
  /home/tan/chat/GetServer/src/../include/Singleton.h \
- /home/tan/chat/GetServer/src/../include/ConfigMgr.h
+ /home/tan/chat/GetServer/src/../include/ConfigMgr.h \
+ /home/tan/chat/GetServer/src/../include/redisMgr.h

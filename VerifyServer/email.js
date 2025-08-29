@@ -26,7 +26,7 @@ function SendMail(mailOptions_){
                 reject(error);
             } else {
                 console.log('邮件已成功发送：' + info.response);
-                resolve(info.response)
+                resolve(info.response);
             }
         });
     })

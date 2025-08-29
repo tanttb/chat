@@ -1,5 +1,5 @@
 #include "CServer.h"
-
+#include "redisMgr.h"
 
 int main(){
    std::string gate_p = ConfigMgr::Instance()["GateServer"]["Port"];
@@ -23,3 +23,26 @@ int main(){
       return EXIT_FAILURE;
    }
 }
+
+// #define a RedisMgr::GetInstance()
+
+// int main() {
+//     assert(a->Set("blogwebsite","llfc.club"));
+//     std::string value="";
+//     assert(a->Get("blogwebsite", value) );
+//     assert(a->Get("nonekey", value) == false);
+//     assert(a->HSet("bloginfo","blogwebsite", "llfc.club"));
+//     assert(a->HGet("bloginfo","blogwebsite") != "");
+//     assert(a->ExistsKey("bloginfo"));
+//     assert(a->Del("bloginfo"));
+//     assert(a->Del("bloginfo"));
+//     assert(a->ExistsKey("bloginfo") == false);
+//     assert(a->LPush("lpushkey1", "lpushvalue1"));
+//     assert(a->LPush("lpushkey1", "lpushvalue2"));
+//     assert(a->LPush("lpushkey1", "lpushvalue3"));
+//     assert(a->RPop("lpushkey1", value));
+//     assert(a->RPop("lpushkey1", value));
+//     assert(a->LPop("lpushkey1", value));
+//     assert(a->LPop("lpushkey2", value)==false);
+//     a->Close();
+// }

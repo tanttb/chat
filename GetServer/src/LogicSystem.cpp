@@ -2,6 +2,8 @@
 #include "LogicSystem.h"
 #include "HttpConnection.h"
 #include "VerifyGrpcClient.h"
+#include "redisMgr.h"
+#include "MysqlMgr.h"
 
 void LogicSystem::RegGet(std::string url, HttpHandler handler)
 {
@@ -61,6 +63,79 @@ LogicSystem::LogicSystem()
 
       root["error"] = rsp.error();
       root["email"] = src_root["email"];
+      std::string jsonstr = root.toStyledString();
+      beast::ostream(connection->_response.body()) << jsonstr;
+      return true;
+   });
+
+   RegPost("/user_register", [](std::shared_ptr<HttpConnection> connection){
+      auto body_str = boost::beast::buffers_to_string(connection->_request.body().data());
+      LOG_INFO("receive body: " << body_str);
+      connection->_response.set(http::field::content_type, "text/json");
+      Json::Value root;
+      Json::Reader reader;
+      Json::Value src_root;
+
+      bool parse_json = reader.parse(body_str, src_root);
+      if(!parse_json){
+         LOG_INFO("Json Parse Failed");
+         root["error"] = ErrorCodes::Error_Json;
+         std::string jsonstr = root.toStyledString();
+         beast::ostream(connection->_response.body()) << jsonstr;
+         return true; 
+      }
+
+      auto email = src_root["email"].asString();
+      auto user = src_root["user"].asString();
+      auto passwd = src_root["passwd"].asString();
+      auto confirm = src_root["confirm"].asString();
+      auto varifycode = src_root["varifycode"].asString();
+
+      std::string verify_code;
+      std::string key = CODEPREFIX + email;
+      
+      bool b_get_varify = RedisMgr::GetInstance()->Get(key, verify_code);
+      if(!b_get_varify){
+         LOG_INFO("Get Verify Code Expired");
+         root["error"] = ErrorCodes::VarifyExpired;
+         std::string jsonstr = root.toStyledString();
+         beast::ostream(connection->_response.body()) << jsonstr;
+         return true;
+      }
+
+      if(verify_code != src_root["varifycode"].asString()){
+         LOG_INFO("Verify Code Error");
+         root["error"] = ErrorCodes::VarifyCodeErr;
+         std::string jsonstr = root.toStyledString();
+         beast::ostream(connection->_response.body()) << jsonstr;
+         return true;
+      }
+
+      bool b_user_exist = RedisMgr::GetInstance()->ExistsKey(src_root["user"].asString());
+      if(b_user_exist){
+         LOG_INFO("User Have Register");
+         root["error"] = ErrorCodes::UserExist;
+         std::string jsonstr = root.toStyledString();
+         beast::ostream(connection->_response.body()) << jsonstr;
+         return true;
+      }
+
+      int uid = MysqlMgr::GetInstance()->RegUser(user, email, passwd);
+      if(uid == -2 || uid == -1 || uid == -3){
+         LOG_INFO("Register Username or Email Exist");
+         root["error"] = ErrorCodes::UserExist;
+         std::string jsonstr = root.toStyledString();
+         beast::ostream(connection->_response.body()) << jsonstr;
+         return true;
+      }
+
+      root["error"] = ErrorCodes::Success;
+      root["uid"] = uid;
+      root["email"] = src_root["email"].asString();
+      root["user"] = src_root["user"].asString();
+      root["passwd"] = src_root["passwd"].asString();
+      root["confirm"] = src_root["confirm"].asString();
+      root["varifycode"] = src_root["varifycode"].asString();
       std::string jsonstr = root.toStyledString();
       beast::ostream(connection->_response.body()) << jsonstr;
       return true;

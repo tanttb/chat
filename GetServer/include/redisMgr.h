@@ -1,6 +1,8 @@
 #pragma once
 #include "const.h"
 
+class redisConPool;
+
 class RedisMgr : public Singleton<RedisMgr>{
    friend class Singleton<RedisMgr>;
    public:
@@ -19,10 +21,30 @@ class RedisMgr : public Singleton<RedisMgr>{
       bool ExistsKey(const std::string &key);
       std::string HGet(const std::string &key, const std::string &hkey);
       void Close();
-
+      ~RedisMgr();
    private:
 
       RedisMgr();
-      redisContext *_connect;
-      redisReply *_reply;
+      
+      std::unique_ptr<redisConPool> _con_pool = nullptr;
+};
+
+class redisConPool{
+   public:
+      redisConPool(size_t size, const char * host, int port, const char* pwd);
+      ~redisConPool();
+      redisContext* getConnection();
+      void returnConnection(redisContext*);
+      void close();
+
+
+   private:
+      std::atomic<bool> _b_stop;
+      size_t _poolsize;
+      const char* _host;
+      int _port;
+      std::queue<redisContext*> _connections;
+      std::mutex _mutex;
+      std::condition_variable _cv;
+
 };

@@ -147,10 +147,38 @@ CMakeFiles/chat.dir/LogicSystem.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/LogicSystem.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tan/chat/GetServer/src/LogicSystem.cpp -o CMakeFiles/chat.dir/LogicSystem.cpp.s
 
+CMakeFiles/chat.dir/MysqlMgr.cpp.o: CMakeFiles/chat.dir/flags.make
+CMakeFiles/chat.dir/MysqlMgr.cpp.o: /home/tan/chat/GetServer/src/MysqlMgr.cpp
+CMakeFiles/chat.dir/MysqlMgr.cpp.o: CMakeFiles/chat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/chat.dir/MysqlMgr.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/MysqlMgr.cpp.o -MF CMakeFiles/chat.dir/MysqlMgr.cpp.o.d -o CMakeFiles/chat.dir/MysqlMgr.cpp.o -c /home/tan/chat/GetServer/src/MysqlMgr.cpp
+
+CMakeFiles/chat.dir/MysqlMgr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/MysqlMgr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tan/chat/GetServer/src/MysqlMgr.cpp > CMakeFiles/chat.dir/MysqlMgr.cpp.i
+
+CMakeFiles/chat.dir/MysqlMgr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/MysqlMgr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tan/chat/GetServer/src/MysqlMgr.cpp -o CMakeFiles/chat.dir/MysqlMgr.cpp.s
+
+CMakeFiles/chat.dir/MysqlPool.cpp.o: CMakeFiles/chat.dir/flags.make
+CMakeFiles/chat.dir/MysqlPool.cpp.o: /home/tan/chat/GetServer/src/MysqlPool.cpp
+CMakeFiles/chat.dir/MysqlPool.cpp.o: CMakeFiles/chat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/chat.dir/MysqlPool.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/MysqlPool.cpp.o -MF CMakeFiles/chat.dir/MysqlPool.cpp.o.d -o CMakeFiles/chat.dir/MysqlPool.cpp.o -c /home/tan/chat/GetServer/src/MysqlPool.cpp
+
+CMakeFiles/chat.dir/MysqlPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/MysqlPool.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tan/chat/GetServer/src/MysqlPool.cpp > CMakeFiles/chat.dir/MysqlPool.cpp.i
+
+CMakeFiles/chat.dir/MysqlPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/MysqlPool.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tan/chat/GetServer/src/MysqlPool.cpp -o CMakeFiles/chat.dir/MysqlPool.cpp.s
+
 CMakeFiles/chat.dir/main.cpp.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/main.cpp.o: /home/tan/chat/GetServer/src/main.cpp
 CMakeFiles/chat.dir/main.cpp.o: CMakeFiles/chat.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/chat.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/chat.dir/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/main.cpp.o -MF CMakeFiles/chat.dir/main.cpp.o.d -o CMakeFiles/chat.dir/main.cpp.o -c /home/tan/chat/GetServer/src/main.cpp
 
 CMakeFiles/chat.dir/main.cpp.i: cmake_force
@@ -164,7 +192,7 @@ CMakeFiles/chat.dir/main.cpp.s: cmake_force
 CMakeFiles/chat.dir/message.grpc.pb.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/message.grpc.pb.cc.o: /home/tan/chat/GetServer/src/message.grpc.pb.cc
 CMakeFiles/chat.dir/message.grpc.pb.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/chat.dir/message.grpc.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/chat.dir/message.grpc.pb.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/message.grpc.pb.cc.o -MF CMakeFiles/chat.dir/message.grpc.pb.cc.o.d -o CMakeFiles/chat.dir/message.grpc.pb.cc.o -c /home/tan/chat/GetServer/src/message.grpc.pb.cc
 
 CMakeFiles/chat.dir/message.grpc.pb.cc.i: cmake_force
@@ -178,7 +206,7 @@ CMakeFiles/chat.dir/message.grpc.pb.cc.s: cmake_force
 CMakeFiles/chat.dir/message.pb.cc.o: CMakeFiles/chat.dir/flags.make
 CMakeFiles/chat.dir/message.pb.cc.o: message.pb.cc
 CMakeFiles/chat.dir/message.pb.cc.o: CMakeFiles/chat.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/chat.dir/message.pb.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/chat.dir/message.pb.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/message.pb.cc.o -MF CMakeFiles/chat.dir/message.pb.cc.o.d -o CMakeFiles/chat.dir/message.pb.cc.o -c /home/tan/chat/GetServer/build/message.pb.cc
 
 CMakeFiles/chat.dir/message.pb.cc.i: cmake_force
@@ -189,6 +217,20 @@ CMakeFiles/chat.dir/message.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/message.pb.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tan/chat/GetServer/build/message.pb.cc -o CMakeFiles/chat.dir/message.pb.cc.s
 
+CMakeFiles/chat.dir/redisMgr.cpp.o: CMakeFiles/chat.dir/flags.make
+CMakeFiles/chat.dir/redisMgr.cpp.o: /home/tan/chat/GetServer/src/redisMgr.cpp
+CMakeFiles/chat.dir/redisMgr.cpp.o: CMakeFiles/chat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/chat.dir/redisMgr.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/chat.dir/redisMgr.cpp.o -MF CMakeFiles/chat.dir/redisMgr.cpp.o.d -o CMakeFiles/chat.dir/redisMgr.cpp.o -c /home/tan/chat/GetServer/src/redisMgr.cpp
+
+CMakeFiles/chat.dir/redisMgr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/chat.dir/redisMgr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tan/chat/GetServer/src/redisMgr.cpp > CMakeFiles/chat.dir/redisMgr.cpp.i
+
+CMakeFiles/chat.dir/redisMgr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/chat.dir/redisMgr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tan/chat/GetServer/src/redisMgr.cpp -o CMakeFiles/chat.dir/redisMgr.cpp.s
+
 # Object files for target chat
 chat_OBJECTS = \
 "CMakeFiles/chat.dir/AsioIOServicePool.cpp.o" \
@@ -196,9 +238,12 @@ chat_OBJECTS = \
 "CMakeFiles/chat.dir/ConfigMgr.cpp.o" \
 "CMakeFiles/chat.dir/HttpConnection.cpp.o" \
 "CMakeFiles/chat.dir/LogicSystem.cpp.o" \
+"CMakeFiles/chat.dir/MysqlMgr.cpp.o" \
+"CMakeFiles/chat.dir/MysqlPool.cpp.o" \
 "CMakeFiles/chat.dir/main.cpp.o" \
 "CMakeFiles/chat.dir/message.grpc.pb.cc.o" \
-"CMakeFiles/chat.dir/message.pb.cc.o"
+"CMakeFiles/chat.dir/message.pb.cc.o" \
+"CMakeFiles/chat.dir/redisMgr.cpp.o"
 
 # External object files for target chat
 chat_EXTERNAL_OBJECTS =
@@ -208,19 +253,24 @@ chat: CMakeFiles/chat.dir/CServer.cpp.o
 chat: CMakeFiles/chat.dir/ConfigMgr.cpp.o
 chat: CMakeFiles/chat.dir/HttpConnection.cpp.o
 chat: CMakeFiles/chat.dir/LogicSystem.cpp.o
+chat: CMakeFiles/chat.dir/MysqlMgr.cpp.o
+chat: CMakeFiles/chat.dir/MysqlPool.cpp.o
 chat: CMakeFiles/chat.dir/main.cpp.o
 chat: CMakeFiles/chat.dir/message.grpc.pb.cc.o
 chat: CMakeFiles/chat.dir/message.pb.cc.o
+chat: CMakeFiles/chat.dir/redisMgr.cpp.o
 chat: CMakeFiles/chat.dir/build.make
 chat: /usr/lib/x86_64-linux-gnu/libboost_json.so.1.83.0
 chat: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0
 chat: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.83.0
 chat: /usr/lib/x86_64-linux-gnu/libjsoncpp.so.1.9.5
 chat: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+chat: /usr/lib/x86_64-linux-gnu/libmysqlcppconn.so
 chat: /usr/lib/x86_64-linux-gnu/libgrpc++_reflection.so.1.51.1
 chat: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 chat: /usr/lib/x86_64-linux-gnu/libboost_container.so.1.83.0
 chat: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.83.0
+chat: /usr/lib/x86_64-linux-gnu/libmysqlcppconn.so
 chat: /usr/lib/x86_64-linux-gnu/libgrpc++.so.1.51.1
 chat: /usr/lib/x86_64-linux-gnu/libgrpc.so.29.0.0
 chat: /usr/lib/x86_64-linux-gnu/libz.so
@@ -277,7 +327,7 @@ chat: /usr/lib/x86_64-linux-gnu/libssl.so
 chat: /usr/lib/x86_64-linux-gnu/libcrypto.so
 chat: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 chat: CMakeFiles/chat.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable chat"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tan/chat/GetServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable chat"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chat.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

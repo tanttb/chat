@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DBOOST_ATOMIC_DYN_LINK -DBOOST_ATOMIC_NO_LIB -DBOOST_CONTAINER_DYN_LINK -DBOOST_CONTAINER_NO_LIB -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_FILESYSTEM_NO_LIB -DBOOST_JSON_DYN_LINK -DBOOST_JSON_NO_LIB -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB
 
-CXX_INCLUDES = -I/home/tan/chat/GetServer/src/. -I/home/tan/chat/GetServer/src/../include -isystem /usr/include/jsoncpp
+CXX_INCLUDES = -I/home/tan/chat/GetServer/src/. -I/home/tan/chat/GetServer/src/../include -I/usr/include/hiredis -isystem /usr/include/jsoncpp
 
 CXX_FLAGS = -std=gnu++20 -pthread
 

@@ -40,6 +40,8 @@ void HttpConnection::WriteResponse()
 {
    auto self = shared_from_this();
    _response.content_length(_response.body().size());
+   std::string buf = boost::beast::buffers_to_string(_response.body().data());
+   LOG_INFO("reply body: " << buf);
    http::async_write(_socket, _response, [self](beast::error_code ec, std::size_t len){
       self->_socket.shutdown(tcp::socket::shutdown_send, ec);
       self->_deadline.cancel();

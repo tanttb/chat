@@ -41,7 +41,8 @@ class RedisMgr{
 
 RedisMgr::RedisMgr()
 {
-   
+   auto &gcfgMgr = ConfigMgr::In
+   _con_pool.reset(new redisConPool(4,))
 }
 
 bool RedisMgr::Connect(const std::string &host, int port)

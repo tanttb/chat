@@ -249,6 +249,54 @@ LogicSystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/LogicSystem.cpp.s
 .PHONY : LogicSystem.cpp.s
 
+MysqlMgr.o: MysqlMgr.cpp.o
+.PHONY : MysqlMgr.o
+
+# target to build an object file
+MysqlMgr.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/MysqlMgr.cpp.o
+.PHONY : MysqlMgr.cpp.o
+
+MysqlMgr.i: MysqlMgr.cpp.i
+.PHONY : MysqlMgr.i
+
+# target to preprocess a source file
+MysqlMgr.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/MysqlMgr.cpp.i
+.PHONY : MysqlMgr.cpp.i
+
+MysqlMgr.s: MysqlMgr.cpp.s
+.PHONY : MysqlMgr.s
+
+# target to generate assembly for a file
+MysqlMgr.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/MysqlMgr.cpp.s
+.PHONY : MysqlMgr.cpp.s
+
+MysqlPool.o: MysqlPool.cpp.o
+.PHONY : MysqlPool.o
+
+# target to build an object file
+MysqlPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/MysqlPool.cpp.o
+.PHONY : MysqlPool.cpp.o
+
+MysqlPool.i: MysqlPool.cpp.i
+.PHONY : MysqlPool.i
+
+# target to preprocess a source file
+MysqlPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/MysqlPool.cpp.i
+.PHONY : MysqlPool.cpp.i
+
+MysqlPool.s: MysqlPool.cpp.s
+.PHONY : MysqlPool.s
+
+# target to generate assembly for a file
+MysqlPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/MysqlPool.cpp.s
+.PHONY : MysqlPool.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -321,6 +369,30 @@ message.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/message.pb.cc.s
 .PHONY : message.pb.cc.s
 
+redisMgr.o: redisMgr.cpp.o
+.PHONY : redisMgr.o
+
+# target to build an object file
+redisMgr.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/redisMgr.cpp.o
+.PHONY : redisMgr.cpp.o
+
+redisMgr.i: redisMgr.cpp.i
+.PHONY : redisMgr.i
+
+# target to preprocess a source file
+redisMgr.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/redisMgr.cpp.i
+.PHONY : redisMgr.cpp.i
+
+redisMgr.s: redisMgr.cpp.s
+.PHONY : redisMgr.s
+
+# target to generate assembly for a file
+redisMgr.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chat.dir/build.make CMakeFiles/chat.dir/redisMgr.cpp.s
+.PHONY : redisMgr.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -345,6 +417,12 @@ help:
 	@echo "... LogicSystem.o"
 	@echo "... LogicSystem.i"
 	@echo "... LogicSystem.s"
+	@echo "... MysqlMgr.o"
+	@echo "... MysqlMgr.i"
+	@echo "... MysqlMgr.s"
+	@echo "... MysqlPool.o"
+	@echo "... MysqlPool.i"
+	@echo "... MysqlPool.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -354,6 +432,9 @@ help:
 	@echo "... message.pb.o"
 	@echo "... message.pb.i"
 	@echo "... message.pb.s"
+	@echo "... redisMgr.o"
+	@echo "... redisMgr.i"
+	@echo "... redisMgr.s"
 .PHONY : help
 
 

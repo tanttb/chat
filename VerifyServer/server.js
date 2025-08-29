@@ -3,13 +3,28 @@ const message_proto = require("./proto")
 const const_module = require("./const")
 const {v4: uuidv4} = require("uuid")
 const emailModule = require("./email")
+const redis_module = require("./redis")
 
 async function GetVarifyCode(call, callback) {
     console.log("email is ", call.request.email)
     try{
-        uniqueId = uuidv4();
+        let query_res = await redis_module.GetRedis(const_module.code_prefix + call.request.email)
+        let uniqueId = query_res
+        if(query_res == null){
+            uniqueId = await uuidv4()
+            console.log(uniqueId)
+            if(uniqueId.length > 6) uniqueId = uniqueId.substring(0, 6);
+            let bres = await redis_module.SetRedisExpire(const_module.code_prefix + call.request.email, uniqueId, 60)
+            if(!bres){
+                callback(null, {email : call.request.email,
+                    error : const_module.Errors.RedisErr
+                });
+                return
+            }
+        }
+        
         console.log("uniqueId is ", uniqueId)
-        let text_str =  '您的验证码为'+ uniqueId +'请三分钟内完成注册'
+        let text_str =  '您的验证码为'+ uniqueId +'请一分钟内完成注册'
         //发送邮件
         let mailOptions = {
             from: '2511584121@qq.com',
@@ -22,6 +37,7 @@ async function GetVarifyCode(call, callback) {
         callback(null, { email:  call.request.email,
             error:const_module.Errors.Success
         }); 
+
     }catch(error){
         console.log("catch error is ", error)
         callback(null, { email:  call.request.email,

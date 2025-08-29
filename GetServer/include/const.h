@@ -30,11 +30,17 @@ namespace http  = beast::http;
 namespace net   = boost::asio;
 using     tcp   = boost::asio::ip::tcp;
 
+const std::string CODEPREFIX = "code_";
+
 enum ErrorCodes{
    Success = 0,
    Error_Json = 1001,
-   RPCFailed = 1002
+   RPCFailed = 1002,
+   VarifyExpired = 1003,  
+   VarifyCodeErr = 1004,  //验证码错误
+   UserExist = 1005
 };
+
 
 namespace Color {
     const std::string RED = "\033[31m";
