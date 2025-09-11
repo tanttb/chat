@@ -141,6 +141,67 @@ LogicSystem::LogicSystem()
       return true;
    });
 
+   RegPost("/reset_pwd", [](std::shared_ptr<HttpConnection> connection){
+      auto body_str = boost::beast::buffers_to_string(connection->_request.body().data());
+      LOG_INFO("receive body: " << body_str);
+      connection->_response.set(http::field::content_type, "text/json");
+      Json::Value root;
+      Json::Reader reader;
+      Json::Value src_root;
+
+      bool parse_json = reader.parse(body_str, src_root);
+      if(!parse_json){
+         LOG_INFO("Json Parse Failed");
+         root["error"] = ErrorCodes::Error_Json;
+         std::string jsonstr = root.toStyledString();
+         beast::ostream(connection->_response.body()) << jsonstr;
+         return true; 
+      }
+
+      auto email = src_root["email"].asString();
+      auto user = src_root["user"].asString();
+      auto passwd = src_root["passwd"].asString();
+      auto verify_code = src_root["varifycode"].asString();
+
+      std::string verifycode;
+      bool b_get_verify = RedisMgr::GetInstance()->Get(CODEPREFIX + src_root["email"].asString(), verifycode);
+      if(!b_get_verify){
+         LOG_INFO("Get Verify Code Expired");
+         root["error"] = ErrorCodes::VarifyExpired;
+         std::string jsonstr = root.toStyledString();
+         beast::ostream(connection->_response.body()) << jsonstr;
+         return true;
+      }
+      if(verify_code != verifycode){
+         LOG_INFO("Reset Passwd Verify Code Error");
+         root["error"] = ErrorCodes::VarifyCodeErr;
+         std::string jsonstr = root.toStyledString();
+         beast::ostream(connection->_response.body()) << jsonstr;
+         return true;
+      }
+
+      bool email_valid = MysqlMgr::GetInstance()->CheckEmail(user, email);
+      if(!email_valid){
+         LOG_INFO("Confirm User According With Email");
+         root["error"] = ErrorCodes::VerifyUserEmail;
+         std::string jsonstr = root.toStyledString();
+         beast::ostream(connection->_response.body()) << jsonstr;
+         return true;
+      }
+
+      bool b_update_passwd = MysqlMgr::GetInstance()->UpdatePwd(user, passwd);
+
+      LOG_INFO("Success Reset Passwd");
+      root["error"] = 0;
+      root["email"] = email;
+      root["user"] = user;
+      root["passwd"] = passwd;
+      root["verifycode"] = verify_code;
+      std::string jsonstr = root.toStyledString();
+      beast::ostream(connection->_response.body()) << jsonstr;
+      return true;
+   });
+
 
 }
 

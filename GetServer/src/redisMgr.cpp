@@ -290,7 +290,7 @@ bool RedisMgr::ExistsKey(const std::string &key)
    auto* _connect = _con_pool->getConnection();
    auto _reply = (redisReply*)redisCommand(_connect, "exists %s", key.c_str());
    if (_reply == nullptr || _reply->type != REDIS_REPLY_INTEGER || _reply->integer == 0) {
-      LOG_ERROR("Not Found Key " << key);
+      LOG_INFO("Not Found Key " << key);
       freeReplyObject(_reply);
       return false;
    }

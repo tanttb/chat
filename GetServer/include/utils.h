@@ -58,3 +58,13 @@ inline std::string UrlDecode(const std::string& str)
     }
     return strTemp;
 }
+
+inline std::string PasswdDecode(const std::string& pwd){
+    int length = pwd.length();
+    std::string decode = pwd;
+    length %= 255;
+    for(int i = 0; i < length; i++){
+        decode[i] ^= length;
+    }
+    return decode;
+}

@@ -38,7 +38,8 @@ enum ErrorCodes{
    RPCFailed = 1002,
    VarifyExpired = 1003,  
    VarifyCodeErr = 1004,  //验证码错误
-   UserExist = 1005
+   VerifyUserEmail = 1005,
+   UserExist = 1006
 };
 
 
