@@ -4,6 +4,7 @@
 #include "VerifyGrpcClient.h"
 #include "redisMgr.h"
 #include "MysqlMgr.h"
+#include "StatusGrpcClient.h"
 
 void LogicSystem::RegGet(std::string url, HttpHandler handler)
 {
@@ -202,6 +203,54 @@ LogicSystem::LogicSystem()
       return true;
    });
 
+   RegPost("/user_login", [](std::shared_ptr<HttpConnection> connection){
+      auto body_str = boost::beast::buffers_to_string(connection->_request.body().data());
+      LOG_INFO("receive body: " << body_str);
+      connection->_response.set(http::field::content_type, "text/json");
+      Json::Value root;
+      Json::Reader reader;
+      Json::Value src_root;
+
+      bool parse_json = reader.parse(body_str, src_root);
+      if(!parse_json){
+         LOG_INFO("Json Parse Failed");
+         root["error"] = ErrorCodes::Error_Json;
+         std::string jsonstr = root.toStyledString();
+         beast::ostream(connection->_response.body()) << jsonstr;
+         return true; 
+      }
+
+      auto email = src_root["user"].asString();
+      auto passwd = src_root["passwd"].asString();
+      UserInfo userin;
+      bool check = MysqlMgr::GetInstance()->CheckPwd(email, passwd, userin);
+      if(!check){
+         LOG_INFO("User Pwd Not Match");
+         root["error"] = ErrorCodes::PasswdInvalid;
+         std::string jsonstr = root.toStyledString();
+         beast::ostream(connection->_response.body()) << jsonstr;
+         return true;
+      }
+
+      auto reply = StatusGrpcClient::GetInstance()->GetChatServer(userin.uid);
+      if(reply.error()){
+         LOG_INFO("Grpc Get Chatserver Failed: " << reply.error());
+         root["error"] = ErrorCodes::RPCFailed;
+         std::string jsonstr = root.toStyledString();
+         beast::ostream(connection->_response.body()) << jsonstr;
+         return true;
+      }
+      LOG_INFO("Success To Load Userinfo Uid: " << userin.uid);
+      root["error"] = 0;
+      root["email"] = email;
+      root["host"] = reply.host();
+      root["port"] = reply.port();
+      root["uid"] = userin.uid;
+      root["token"] = reply.token();
+      std::string jsonstr = root.toStyledString();
+      beast::ostream(connection->_response.body()) << jsonstr;
+      return true;
+   });
 
 }
 

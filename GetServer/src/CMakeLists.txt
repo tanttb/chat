@@ -24,7 +24,9 @@ include_directories(${HIREDIS_INCLUDE_DIRS})
 # include_directories(${MYSQL_INCLUDE_DIR})
 # include_directories(${MYSQLCPPCONN_INCLUDE_DIR})
 
+
 protobuf_generate_cpp(PROTO_SRCS PROTO_HDRS ${PROTO_FILE})
+
 
 aux_source_directory(. SRC_LIST)
 add_executable(chat ${SRC_LIST} ${PROTO_SRCS} ${PROTO_HDRS})

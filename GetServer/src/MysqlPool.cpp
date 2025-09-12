@@ -202,3 +202,37 @@ bool MysqlDao::UpdatePwd(const std::string &name, const std::string &pwd){
       return false;
    }
 }
+
+bool MysqlDao::CheckPwd(const std::string &email, const std::string pwd, UserInfo& a){
+   auto con = std::move(_mysqlpool->getConnection());
+   if(con == nullptr) return false;
+
+   try{
+
+      std::unique_ptr<sql::PreparedStatement> pstmt(con->_con->prepareStatement("select * from user where email = ?"));
+      pstmt->setString(1, email);
+      std::unique_ptr<sql::ResultSet> res(pstmt->executeQuery());
+      std::string p = "";
+      if(res->next()){
+         LOG_INFO("Check Login Passwd a = " << pwd << " b = " << res->getString("passwd"));
+         p = res->getString("passwd");
+      }
+
+      if(p != pwd){
+         _mysqlpool->returnConnection(std::move(con));
+         return false;
+      }
+
+      a.pwd = p;
+      a.name = res->getString("name");
+      a.uid = res->getInt("uid");
+      a.email = email;
+
+      _mysqlpool->returnConnection(std::move(con));
+      return true;
+   }catch(sql::SQLException &e){
+      _mysqlpool->returnConnection(std::move(con));
+      LOG_ERROR("SQLException: " << e.what());
+      return false;
+   }
+}

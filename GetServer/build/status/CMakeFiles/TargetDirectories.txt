@@ -1,0 +1,3 @@
+/home/tan/chat/GetServer/build/status/CMakeFiles/stutsServer.dir
+/home/tan/chat/GetServer/build/status/CMakeFiles/edit_cache.dir
+/home/tan/chat/GetServer/build/status/CMakeFiles/rebuild_cache.dir

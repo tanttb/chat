@@ -1,3 +1,4 @@
+#pragma once
 
 #include <grpcpp/grpcpp.h>
 #include "message.grpc.pb.h"

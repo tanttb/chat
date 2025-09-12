@@ -39,7 +39,15 @@ enum ErrorCodes{
    VarifyExpired = 1003,  
    VarifyCodeErr = 1004,  //验证码错误
    VerifyUserEmail = 1005,
-   UserExist = 1006
+   UserExist = 1006,
+   PasswdInvalid = 1007
+};
+
+struct UserInfo{
+    std::string name;
+    std::string email;
+    int uid;
+    std::string pwd;
 };
 
 
