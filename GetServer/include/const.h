@@ -40,7 +40,10 @@ enum ErrorCodes{
    VarifyCodeErr = 1004,  //验证码错误
    VerifyUserEmail = 1005,
    UserExist = 1006,
-   PasswdInvalid = 1007
+   PasswdInvalid = 1007,
+   UidValied = 1008,
+   MSG_CHAT_LOGIN_RSP = 1009,
+   TokenInvalid = 1010
 };
 
 struct UserInfo{

@@ -1,0 +1,33 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/chatserver.dir/AsioIOServicePool.cpp.o"
+  "CMakeFiles/chatserver.dir/AsioIOServicePool.cpp.o.d"
+  "CMakeFiles/chatserver.dir/CSession.cpp.o"
+  "CMakeFiles/chatserver.dir/CSession.cpp.o.d"
+  "CMakeFiles/chatserver.dir/ChatServer.cpp.o"
+  "CMakeFiles/chatserver.dir/ChatServer.cpp.o.d"
+  "CMakeFiles/chatserver.dir/ConfigMgr.cpp.o"
+  "CMakeFiles/chatserver.dir/ConfigMgr.cpp.o.d"
+  "CMakeFiles/chatserver.dir/MysqlMgr.cpp.o"
+  "CMakeFiles/chatserver.dir/MysqlMgr.cpp.o.d"
+  "CMakeFiles/chatserver.dir/MysqlPool.cpp.o"
+  "CMakeFiles/chatserver.dir/MysqlPool.cpp.o.d"
+  "CMakeFiles/chatserver.dir/StatusGrpcClient.cpp.o"
+  "CMakeFiles/chatserver.dir/StatusGrpcClient.cpp.o.d"
+  "CMakeFiles/chatserver.dir/TcpLogicSystem.cpp.o"
+  "CMakeFiles/chatserver.dir/TcpLogicSystem.cpp.o.d"
+  "CMakeFiles/chatserver.dir/main.cpp.o"
+  "CMakeFiles/chatserver.dir/main.cpp.o.d"
+  "CMakeFiles/chatserver.dir/message.grpc.pb.cc.o"
+  "CMakeFiles/chatserver.dir/message.grpc.pb.cc.o.d"
+  "CMakeFiles/chatserver.dir/message.pb.cc.o"
+  "CMakeFiles/chatserver.dir/message.pb.cc.o.d"
+  "CMakeFiles/chatserver.dir/redisMgr.cpp.o"
+  "CMakeFiles/chatserver.dir/redisMgr.cpp.o.d"
+  "chatserver"
+  "chatserver.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/chatserver.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -39,7 +39,7 @@ void RunServer() {
     // 在单独的线程中运行io_context
     std::thread([&io_context]() { io_context.run(); }).detach();
     // 等待服务器关闭
-    server->Wait();
+    server->Wait(); 
     io_context.stop();
 }
 

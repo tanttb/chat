@@ -1,0 +1,34 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/tan/chat/ChatServer/src/AsioIOServicePool.cpp" "CMakeFiles/chatserver.dir/AsioIOServicePool.cpp.o" "gcc" "CMakeFiles/chatserver.dir/AsioIOServicePool.cpp.o.d"
+  "/home/tan/chat/ChatServer/src/CSession.cpp" "CMakeFiles/chatserver.dir/CSession.cpp.o" "gcc" "CMakeFiles/chatserver.dir/CSession.cpp.o.d"
+  "/home/tan/chat/ChatServer/src/ChatServer.cpp" "CMakeFiles/chatserver.dir/ChatServer.cpp.o" "gcc" "CMakeFiles/chatserver.dir/ChatServer.cpp.o.d"
+  "/home/tan/chat/ChatServer/src/ConfigMgr.cpp" "CMakeFiles/chatserver.dir/ConfigMgr.cpp.o" "gcc" "CMakeFiles/chatserver.dir/ConfigMgr.cpp.o.d"
+  "/home/tan/chat/ChatServer/src/MysqlMgr.cpp" "CMakeFiles/chatserver.dir/MysqlMgr.cpp.o" "gcc" "CMakeFiles/chatserver.dir/MysqlMgr.cpp.o.d"
+  "/home/tan/chat/ChatServer/src/MysqlPool.cpp" "CMakeFiles/chatserver.dir/MysqlPool.cpp.o" "gcc" "CMakeFiles/chatserver.dir/MysqlPool.cpp.o.d"
+  "/home/tan/chat/ChatServer/src/StatusGrpcClient.cpp" "CMakeFiles/chatserver.dir/StatusGrpcClient.cpp.o" "gcc" "CMakeFiles/chatserver.dir/StatusGrpcClient.cpp.o.d"
+  "/home/tan/chat/ChatServer/src/TcpLogicSystem.cpp" "CMakeFiles/chatserver.dir/TcpLogicSystem.cpp.o" "gcc" "CMakeFiles/chatserver.dir/TcpLogicSystem.cpp.o.d"
+  "/home/tan/chat/ChatServer/src/main.cpp" "CMakeFiles/chatserver.dir/main.cpp.o" "gcc" "CMakeFiles/chatserver.dir/main.cpp.o.d"
+  "/home/tan/chat/ChatServer/src/message.grpc.pb.cc" "CMakeFiles/chatserver.dir/message.grpc.pb.cc.o" "gcc" "CMakeFiles/chatserver.dir/message.grpc.pb.cc.o.d"
+  "/home/tan/chat/ChatServer/src/message.pb.cc" "CMakeFiles/chatserver.dir/message.pb.cc.o" "gcc" "CMakeFiles/chatserver.dir/message.pb.cc.o.d"
+  "/home/tan/chat/ChatServer/src/redisMgr.cpp" "CMakeFiles/chatserver.dir/redisMgr.cpp.o" "gcc" "CMakeFiles/chatserver.dir/redisMgr.cpp.o.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

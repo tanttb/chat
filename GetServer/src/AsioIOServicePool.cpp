@@ -1,4 +1,5 @@
 #include "AsioIOServicePool.h"
+#include "LogicSystem.h"
 #include <iostream>
 using namespace std;
 

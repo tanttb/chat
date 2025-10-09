@@ -5,6 +5,7 @@ CMakeFiles/chat.dir/AsioIOServicePool.cpp.o
  /home/tan/chat/GetServer/src/AsioIOServicePool.cpp
  /home/tan/chat/GetServer/include/AsioIOServicePool.h
  /home/tan/chat/GetServer/include/ConfigMgr.h
+ /home/tan/chat/GetServer/include/LogicSystem.h
  /home/tan/chat/GetServer/include/Singleton.h
  /home/tan/chat/GetServer/include/const.h
  /home/tan/chat/GetServer/include/utils.h

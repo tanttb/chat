@@ -38,7 +38,6 @@ class StatusGrpcClient : public Singleton<StatusGrpcClient>{
    public:
       // ~StatusGrpcClient();
       GetChatServerRsp GetChatServer(int uid);
-
    private:
       StatusGrpcClient();
       std::unique_ptr<StatusConPool> _pool;

@@ -13,6 +13,8 @@ using grpc::Status;
 using message::GetChatServerReq;
 using message::GetChatServerRsp;
 using message::StatusService;
+using message::LoginRsp;
+using message::LoginReq;
 
 struct ChatServer {
    std::string host;
@@ -31,8 +33,7 @@ class StatusServiceImpl final : public StatusService::Service
 public:
    StatusServiceImpl();
    Status GetChatServer(ServerContext* context, const GetChatServerReq* request, GetChatServerRsp* reply) override;
-   // Status Login(ServerContext* context, const GetChatServerReq* request,
-   //      GetChatServerRsp* reply) override;
+   Status Login(ServerContext* context, const LoginReq* request, LoginRsp* reply) override;
 
 private:
 
@@ -61,6 +62,27 @@ Status StatusServiceImpl::GetChatServer(ServerContext* context, const GetChatSer
    reply->set_error(ErrorCodes::Success);
    reply->set_token(generate_unique_string());
    insertToken(request->uid(), reply->token());
+   return Status::OK;
+}
+
+Status StatusServiceImpl::Login(ServerContext* context, const LoginReq* request, LoginRsp* reply)
+{
+   auto uid = request->uid();
+   auto token = request->token();
+
+   if(_tokens.find(uid) == _tokens.end()){
+      reply->set_error(ErrorCodes::UidValied);
+      return Status::OK;
+   }
+
+   if(_tokens[uid] != token){
+      reply->set_error(ErrorCodes::TokenInvalid);
+      return Status::OK;
+   }
+
+   reply->set_error(ErrorCodes::Success);
+   reply->set_uid(uid);
+   reply->set_token(token);
    return Status::OK;
 }
 

@@ -2130,4 +2130,5 @@ CMakeFiles/chat.dir/AsioIOServicePool.cpp.o: \
  /usr/include/hiredis/read.h /usr/include/hiredis/sds.h \
  /usr/include/hiredis/alloc.h \
  /home/tan/chat/GetServer/src/../include/utils.h \
- /home/tan/chat/GetServer/src/../include/ConfigMgr.h
+ /home/tan/chat/GetServer/src/../include/ConfigMgr.h \
+ /home/tan/chat/GetServer/src/../include/LogicSystem.h
