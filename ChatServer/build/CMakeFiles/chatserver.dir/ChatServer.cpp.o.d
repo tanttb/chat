@@ -2237,4 +2237,5 @@ CMakeFiles/chatserver.dir/ChatServer.cpp.o: \
  /home/tan/chat/ChatServer/src/../include/ConfigMgr.h \
  /home/tan/chat/ChatServer/src/../include/CSession.h \
  /home/tan/chat/ChatServer/src/../include/MsgNode.h \
- /home/tan/chat/ChatServer/src/../include/AsioIOServicePool.h
+ /home/tan/chat/ChatServer/src/../include/AsioIOServicePool.h \
+ /home/tan/chat/ChatServer/src/../include/UserMgr.h

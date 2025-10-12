@@ -111,10 +111,24 @@ CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/ConfigMgr.cpp.s: cmake_fo
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/ConfigMgr.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tan/chat/GetServer/src/ConfigMgr.cpp -o CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/ConfigMgr.cpp.s
 
+CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o: CMakeFiles/stutsServer.dir/flags.make
+CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o: /home/tan/chat/GetServer/src/redisMgr.cpp
+CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o: CMakeFiles/stutsServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tan/chat/GetServer/build/status/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o -MF CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o.d -o CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o -c /home/tan/chat/GetServer/src/redisMgr.cpp
+
+CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tan/chat/GetServer/src/redisMgr.cpp > CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.i
+
+CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tan/chat/GetServer/src/redisMgr.cpp -o CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.s
+
 CMakeFiles/stutsServer.dir/StatusServer.cpp.o: CMakeFiles/stutsServer.dir/flags.make
 CMakeFiles/stutsServer.dir/StatusServer.cpp.o: /home/tan/chat/GetServer/StatusServer/StatusServer.cpp
 CMakeFiles/stutsServer.dir/StatusServer.cpp.o: CMakeFiles/stutsServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tan/chat/GetServer/build/status/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/stutsServer.dir/StatusServer.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/tan/chat/GetServer/build/status/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/stutsServer.dir/StatusServer.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/stutsServer.dir/StatusServer.cpp.o -MF CMakeFiles/stutsServer.dir/StatusServer.cpp.o.d -o CMakeFiles/stutsServer.dir/StatusServer.cpp.o -c /home/tan/chat/GetServer/StatusServer/StatusServer.cpp
 
 CMakeFiles/stutsServer.dir/StatusServer.cpp.i: cmake_force
@@ -130,6 +144,7 @@ stutsServer_OBJECTS = \
 "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/message.pb.cc.o" \
 "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/message.grpc.pb.cc.o" \
 "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/ConfigMgr.cpp.o" \
+"CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o" \
 "CMakeFiles/stutsServer.dir/StatusServer.cpp.o"
 
 # External object files for target stutsServer
@@ -138,6 +153,7 @@ stutsServer_EXTERNAL_OBJECTS =
 stutsServer: CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/message.pb.cc.o
 stutsServer: CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/message.grpc.pb.cc.o
 stutsServer: CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/ConfigMgr.cpp.o
+stutsServer: CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o
 stutsServer: CMakeFiles/stutsServer.dir/StatusServer.cpp.o
 stutsServer: CMakeFiles/stutsServer.dir/build.make
 stutsServer: /usr/lib/x86_64-linux-gnu/libboost_json.so.1.83.0
@@ -205,7 +221,7 @@ stutsServer: /usr/lib/x86_64-linux-gnu/libssl.so
 stutsServer: /usr/lib/x86_64-linux-gnu/libcrypto.so
 stutsServer: /usr/lib/x86_64-linux-gnu/libprotobuf.so
 stutsServer: CMakeFiles/stutsServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tan/chat/GetServer/build/status/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable stutsServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/tan/chat/GetServer/build/status/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable stutsServer"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/stutsServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

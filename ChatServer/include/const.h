@@ -34,7 +34,11 @@ namespace net   = boost::asio;
 using     tcp   = boost::asio::ip::tcp;
 
 const std::string CODEPREFIX = "code_";
-const std::string USERTOKENPREFIX = "usertoken_";
+const std::string USERIPPREFIX = "uip_";
+const std::string USERTOKENPREFIX = "utoken_";
+const std::string IPCOUNTPREFIX = "ipcount_";
+const std::string USER_BASE_INFO = "ubaseinfo_";
+const std::string LOGIN_COUNT = "logincount_";
 
 constexpr const int HEADLEN = 4;
 constexpr const int MAX_DATA_LENGTH = 65563;
@@ -70,13 +74,6 @@ enum MSG_IDS : short{
 	ID_NOTIFY_OFF_LINE_REQ = 1021, 
 	ID_HEART_BEAT_REQ = 1023,    
 	ID_HEARTBEAT_RSP = 1024, 
-};
-
-struct UserInfo{
-    std::string name;
-    std::string email;
-    int uid;
-    std::string pwd;
 };
 
 namespace Color {

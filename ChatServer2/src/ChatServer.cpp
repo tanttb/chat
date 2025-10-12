@@ -1,6 +1,7 @@
 #include "ChatServer.h"
 #include "CSession.h"
 #include "AsioIOServicePool.h"
+#include "UserMgr.h"
 
 ChatServer::ChatServer(boost::asio::io_context &ioc, unsigned short port): _ioc(ioc), _port(port), _acceptor(ioc, tcp::endpoint(tcp::v4(), port))
 {
@@ -22,11 +23,13 @@ void ChatServer::StartAccept()
 }
 
 
-void ChatServer::ClearSession(std::string id)
+void ChatServer::ClearSession(std::string sessionid)
 {
+
    std::lock_guard<std::mutex> lock(_mutex);
-   if(_tcpconnects.find(id) != _tcpconnects.end()){
-      _tcpconnects.erase(id);
+   if(_tcpconnects.find(sessionid) != _tcpconnects.end()){
+      UserMgr::GetInstance()->RemoveUserSession(_tcpconnects[sessionid]->GetUserId());
+      _tcpconnects.erase(sessionid);
    }
 }
 
@@ -35,7 +38,7 @@ void ChatServer::HandleAccept(std::shared_ptr<CSession> sess, const boost::syste
    if(!er){
       sess->Start();
       std::lock_guard<std::mutex> lock(_mutex);
-      _tcpconnects.insert({sess->getUid(), sess});
+      _tcpconnects.insert({sess->getSessionUid(), sess});
       
    }else{
       LOG_ERROR("Tcp Session Connect Failed: " << er.what());

@@ -31,6 +31,11 @@ namespace net   = boost::asio;
 using     tcp   = boost::asio::ip::tcp;
 
 const std::string CODEPREFIX = "code_";
+const std::string USERIPPREFIX = "uip_";
+const std::string USERTOKENPREFIX = "utoken_";
+const std::string IPCOUNTPREFIX = "ipcount_";
+const std::string USER_BASE_INFO = "ubaseinfo_";
+const std::string LOGIN_COUNT = "logincount_";
 
 enum ErrorCodes{
    Success = 0,
@@ -50,9 +55,12 @@ struct UserInfo{
     std::string name;
     std::string email;
     int uid;
+    int sex;
     std::string pwd;
+    std::string nick;
+    std::string desc;
+    std::string icon;
 };
-
 
 namespace Color {
     const std::string RED = "\033[31m";

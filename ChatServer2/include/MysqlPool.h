@@ -6,7 +6,7 @@
 #include <cppconn/resultset.h>
 #include <cppconn/statement.h>
 #include <cppconn/exception.h>
-
+#include "userdata.h"
 #include "const.h"
 
 class SqlConnection{
@@ -53,6 +53,7 @@ class MysqlDao{
    bool CheckEmail(const std::string &name, const std::string &email);
    bool UpdatePwd(const std::string &name, const std::string &pwd);
    bool CheckPwd(const std::string &name, const std::string pwd, UserInfo&);
+   std::shared_ptr<UserInfo> GetUser(int uid);
 
    private:
       

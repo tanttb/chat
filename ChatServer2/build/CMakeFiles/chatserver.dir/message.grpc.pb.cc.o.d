@@ -1,7 +1,7 @@
 CMakeFiles/chatserver.dir/message.grpc.pb.cc.o: \
- /home/tan/chat/ChatServer/src/message.grpc.pb.cc \
+ /home/tan/chat/ChatServer2/src/message.grpc.pb.cc \
  /usr/include/stdc-predef.h \
- /home/tan/chat/ChatServer/src/../include/message.pb.h \
+ /home/tan/chat/ChatServer2/src/../include/message.pb.h \
  /usr/include/c++/13/limits \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -276,8 +276,8 @@ CMakeFiles/chatserver.dir/message.grpc.pb.cc.o: \
  /usr/include/c++/13/bits/std_function.h /usr/include/c++/13/array \
  /usr/include/google/protobuf/map_type_handler.h \
  /usr/include/google/protobuf/extension_set.h /usr/include/c++/13/cassert \
- /home/tan/chat/ChatServer/src/../include/message.grpc.pb.h \
- /home/tan/chat/ChatServer/src/../include/message.pb.h \
+ /home/tan/chat/ChatServer2/src/../include/message.grpc.pb.h \
+ /home/tan/chat/ChatServer2/src/../include/message.pb.h \
  /usr/include/grpcpp/generic/async_generic_service.h \
  /usr/include/grpc/impl/codegen/port_platform.h \
  /usr/include/linux/version.h \

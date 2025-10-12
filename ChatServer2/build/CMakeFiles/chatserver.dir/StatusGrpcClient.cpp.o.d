@@ -1,7 +1,7 @@
 CMakeFiles/chatserver.dir/StatusGrpcClient.cpp.o: \
- /home/tan/chat/ChatServer/src/StatusGrpcClient.cpp \
+ /home/tan/chat/ChatServer2/src/StatusGrpcClient.cpp \
  /usr/include/stdc-predef.h \
- /home/tan/chat/ChatServer/src/../include/StatusGrpcClient.h \
+ /home/tan/chat/ChatServer2/src/./../include/StatusGrpcClient.h \
  /usr/include/grpcpp/grpcpp.h /usr/include/grpc/grpc.h \
  /usr/include/grpc/support/port_platform.h \
  /usr/include/grpc/impl/codegen/port_platform.h /usr/include/features.h \
@@ -377,8 +377,8 @@ CMakeFiles/chatserver.dir/StatusGrpcClient.cpp.o: \
  /usr/include/grpcpp/impl/server_builder_plugin.h \
  /usr/include/grpcpp/security/authorization_policy_provider.h \
  /usr/include/grpcpp/server_posix.h /usr/include/grpcpp/version_info.h \
- /home/tan/chat/ChatServer/src/../include/message.grpc.pb.h \
- /home/tan/chat/ChatServer/src/../include/message.pb.h \
+ /home/tan/chat/ChatServer2/src/./../include/message.grpc.pb.h \
+ /home/tan/chat/ChatServer2/src/./../include/message.pb.h \
  /usr/include/google/protobuf/port_def.inc \
  /usr/include/google/protobuf/port_undef.inc \
  /usr/include/google/protobuf/io/coded_stream.h \
@@ -456,7 +456,7 @@ CMakeFiles/chatserver.dir/StatusGrpcClient.cpp.o: \
  /usr/include/grpcpp/support/proto_buffer_writer.h \
  /usr/include/grpcpp/impl/codegen/serialization_traits.h \
  /usr/include/grpcpp/support/stub_options.h \
- /home/tan/chat/ChatServer/src/../include/const.h \
+ /home/tan/chat/ChatServer2/src/./../include/const.h \
  /usr/include/boost/beast/http.hpp \
  /usr/include/boost/beast/core/detail/config.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
@@ -2427,6 +2427,6 @@ CMakeFiles/chatserver.dir/StatusGrpcClient.cpp.o: \
  /usr/include/c++/13/bits/stl_queue.h /usr/include/hiredis/hiredis.h \
  /usr/include/hiredis/read.h /usr/include/hiredis/sds.h \
  /usr/include/hiredis/alloc.h \
- /home/tan/chat/ChatServer/src/../include/utils.h \
- /home/tan/chat/ChatServer/src/../include/Singleton.h \
- /home/tan/chat/ChatServer/src/../include/ConfigMgr.h
+ /home/tan/chat/ChatServer2/src/./../include/utils.h \
+ /home/tan/chat/ChatServer2/src/./../include/Singleton.h \
+ /home/tan/chat/ChatServer2/src/./../include/ConfigMgr.h

@@ -5,6 +5,7 @@ ConfigMgr::ConfigMgr(){
 
    boost::filesystem::path cur_path = boost::filesystem::current_path();
    boost::filesystem::path config_path = cur_path / "../../config.ini";
+   // boost::filesystem::path config_path = cur_path / "../config.ini";
    std::cout << "Config path: " << config_path << std::endl;
 
    boost::property_tree::ptree pt;

@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/tan/chat/GetServer/src/ConfigMgr.cpp" "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/ConfigMgr.cpp.o" "gcc" "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/ConfigMgr.cpp.o.d"
   "/home/tan/chat/GetServer/src/message.grpc.pb.cc" "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/message.grpc.pb.cc.o" "gcc" "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/message.grpc.pb.cc.o.d"
   "/home/tan/chat/GetServer/src/message.pb.cc" "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/message.pb.cc.o" "gcc" "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/message.pb.cc.o.d"
+  "/home/tan/chat/GetServer/src/redisMgr.cpp" "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o" "gcc" "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

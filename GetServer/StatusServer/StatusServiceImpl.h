@@ -5,6 +5,7 @@
 #include <boost/uuid/uuid_generators.hpp>
 #include <boost/uuid/uuid_io.hpp>
 #include "const.h"
+#include "redisMgr.h"
 
 using grpc::Server;
 using grpc::ServerBuilder;
@@ -23,7 +24,7 @@ struct ChatServer {
    int con_count;
 
    bool operator <(const ChatServer &a) const{
-      return con_count < a.con_count;
+      return con_count > a.con_count;
    }
 };
 
@@ -42,7 +43,6 @@ private:
    std::priority_queue<ChatServer> _servers;
    std::unordered_map<int, std::string> _tokens;
    std::mutex _ser_mutex;
-   std::mutex _token_mutex;
 };
 
 
@@ -53,6 +53,8 @@ std::string generate_unique_string() {
     std::string unique_string = to_string(uuid);
     return unique_string;
 }
+
+
 Status StatusServiceImpl::GetChatServer(ServerContext* context, const GetChatServerReq* request, GetChatServerRsp* reply)
 {
    std::string prefix("llfc status server has received :  ");
@@ -70,12 +72,17 @@ Status StatusServiceImpl::Login(ServerContext* context, const LoginReq* request,
    auto uid = request->uid();
    auto token = request->token();
 
-   if(_tokens.find(uid) == _tokens.end()){
+   std::string uid_str = std::to_string(uid);
+   std::string token_key = USERTOKENPREFIX + uid_str;
+   std::string token_val = ""; 
+   bool success = RedisMgr::GetInstance()->Get(token_key, token_val);
+
+   if(!success){
       reply->set_error(ErrorCodes::UidValied);
       return Status::OK;
    }
 
-   if(_tokens[uid] != token){
+   if(token_val != token){
       reply->set_error(ErrorCodes::TokenInvalid);
       return Status::OK;
    }
@@ -88,6 +95,7 @@ Status StatusServiceImpl::Login(ServerContext* context, const LoginReq* request,
 
 ChatServer StatusServiceImpl::getChatServer()
 {
+   //update
    std::lock_guard<std::mutex> lock(_ser_mutex);
    auto minServer = _servers.top();
    _servers.pop();
@@ -98,9 +106,10 @@ ChatServer StatusServiceImpl::getChatServer()
 
 void StatusServiceImpl::insertToken(int uid, std::string token)
 {
-   std::lock_guard<std::mutex> lock(_token_mutex);
-   _tokens[uid] = token;
+   std::string uid_str = USERTOKENPREFIX + std::to_string(uid);
+   RedisMgr::GetInstance()->Set(uid_str, token);
 }
+
 StatusServiceImpl::StatusServiceImpl()
 {
    ChatServer server;
@@ -110,10 +119,10 @@ StatusServiceImpl::StatusServiceImpl()
    server.name = ConfigMgr::Instance()["ChatServer1"]["Name"];
    _servers.push(server);
 
-   server.port = ConfigMgr::Instance()["ChatServer2"]["Port"];
-   server.host = ConfigMgr::Instance()["ChatServer2"]["Host"];
-   server.con_count = 0;
-   server.name = ConfigMgr::Instance()["ChatServer2"]["Name"];
+   // server.port = ConfigMgr::Instance()["ChatServer2"]["Port"];
+   // server.host = ConfigMgr::Instance()["ChatServer2"]["Host"];
+   // server.con_count = 0;
+   // server.name = ConfigMgr::Instance()["ChatServer2"]["Name"];
    _servers.push(server);
 }
 

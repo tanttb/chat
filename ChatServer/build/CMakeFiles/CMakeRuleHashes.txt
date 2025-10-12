@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+6f5e783dda2790431867bba063212626 /home/tan/chat/ChatServer/src/message.pb.cc

@@ -18,7 +18,7 @@ void MysqlPool::CheckConnection(){
          std::unique_ptr<sql::Statement> stmt = std::unique_ptr<sql::Statement>(con->_con->createStatement());
          stmt->executeQuery("select 1");
          con->_last_time = timesp;
-         LOG_INFO("Execute Timer Alive Query");
+         // LOG_INFO("Execute Timer Alive Query");
 
       }catch(sql::SQLException &e){
          LOG_ERROR("Error Keeping Connection Alive: " << e.what());
@@ -235,4 +235,42 @@ bool MysqlDao::CheckPwd(const std::string &email, const std::string pwd, UserInf
       LOG_ERROR("SQLException: " << e.what());
       return false;
    }
+}
+
+std::shared_ptr<UserInfo> MysqlDao::GetUser(int uid){
+   auto con = std::move(_mysqlpool->getConnection());
+	if (con == nullptr) {
+		return nullptr;
+	}
+
+   try {
+		std::unique_ptr<sql::PreparedStatement> pstmt(con->_con->prepareStatement("SELECT * FROM user WHERE uid = ?"));
+		pstmt->setInt(1, uid);
+
+		// ִ�в�ѯ
+		std::unique_ptr<sql::ResultSet> res(pstmt->executeQuery());
+		std::shared_ptr<UserInfo> user_ptr = nullptr;
+		// ���������
+		while (res->next()) {
+			user_ptr.reset(new UserInfo);
+			user_ptr->pwd = res->getString("passwd");
+			user_ptr->email = res->getString("email");
+			user_ptr->name= res->getString("name");
+			// user_ptr->nick = res->getString("nick");
+			// user_ptr->desc = res->getString("desc");
+			// user_ptr->sex = res->getInt("sex");
+			// user_ptr->icon = res->getString("icon");
+			user_ptr->uid = uid;
+			break;
+		}
+      // std::cout << user_ptr->email<<std::endl;
+		return user_ptr;
+	}
+	catch (sql::SQLException& e) {
+		std::cerr << "SQLException: " << e.what();
+		std::cerr << " (MySQL error code: " << e.getErrorCode();
+		std::cerr << ", SQLState: " << e.getSQLState() << " )" << std::endl;
+		return nullptr;
+	}
+
 }

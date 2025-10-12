@@ -26,6 +26,7 @@ set(SRC_LIST
     "${SOURCE_DIR}/message.pb.cc"
     "${SOURCE_DIR}/message.grpc.pb.cc"
     "${SOURCE_DIR}/ConfigMgr.cpp"
+    "${SOURCE_DIR}/redisMgr.cpp"
     "StatusServer.cpp"
 )
 

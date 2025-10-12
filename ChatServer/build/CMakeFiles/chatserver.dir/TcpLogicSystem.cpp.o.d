@@ -2239,7 +2239,24 @@ CMakeFiles/chatserver.dir/TcpLogicSystem.cpp.o: \
  /home/tan/chat/ChatServer/src/../include/MsgNode.h \
  /home/tan/chat/ChatServer/src/../include/ChatServer.h \
  /home/tan/chat/ChatServer/src/../include/CSession.h \
+ /home/tan/chat/ChatServer/src/../include/userdata.h \
  /home/tan/chat/ChatServer/src/../include/redisMgr.h \
+ /home/tan/chat/ChatServer/src/../include/MysqlMgr.h \
+ /home/tan/chat/ChatServer/src/../include/MysqlPool.h \
+ /usr/include/c++/13/thread /usr/include/mysql_driver.h \
+ /usr/include/boost/scoped_ptr.hpp \
+ /usr/include/boost/smart_ptr/scoped_ptr.hpp \
+ /usr/include/cppconn/driver.h /usr/include/cppconn/connection.h \
+ /usr/include/cppconn/build_config.h /usr/include/cppconn/warning.h \
+ /usr/include/cppconn/sqlstring.h /usr/include/cppconn/variant.h \
+ /usr/include/cppconn/exception.h /usr/include/mysql_connection.h \
+ /usr/include/cppconn/connection.h \
+ /usr/include/cppconn/prepared_statement.h \
+ /usr/include/cppconn/statement.h /usr/include/cppconn/config.h \
+ /usr/include/inttypes.h /usr/include/cppconn/resultset.h \
+ /usr/include/cppconn/resultset_metadata.h \
+ /usr/include/cppconn/datatype.h /usr/include/cppconn/resultset.h \
+ /usr/include/cppconn/statement.h /usr/include/cppconn/exception.h \
  /home/tan/chat/ChatServer/src/../include/StatusGrpcClient.h \
  /usr/include/grpcpp/grpcpp.h /usr/include/grpc/grpc.h \
  /usr/include/grpc/support/port_platform.h \
@@ -2433,4 +2450,5 @@ CMakeFiles/chatserver.dir/TcpLogicSystem.cpp.o: \
  /usr/include/grpcpp/impl/codegen/proto_buffer_writer.h \
  /usr/include/grpcpp/support/proto_buffer_writer.h \
  /usr/include/grpcpp/impl/codegen/serialization_traits.h \
- /usr/include/grpcpp/support/stub_options.h
+ /usr/include/grpcpp/support/stub_options.h \
+ /home/tan/chat/ChatServer/src/../include/UserMgr.h

@@ -177,6 +177,30 @@ CSession.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/CSession.cpp.s
 .PHONY : CSession.cpp.s
 
+ChatGrpcClient.o: ChatGrpcClient.cpp.o
+.PHONY : ChatGrpcClient.o
+
+# target to build an object file
+ChatGrpcClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/ChatGrpcClient.cpp.o
+.PHONY : ChatGrpcClient.cpp.o
+
+ChatGrpcClient.i: ChatGrpcClient.cpp.i
+.PHONY : ChatGrpcClient.i
+
+# target to preprocess a source file
+ChatGrpcClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/ChatGrpcClient.cpp.i
+.PHONY : ChatGrpcClient.cpp.i
+
+ChatGrpcClient.s: ChatGrpcClient.cpp.s
+.PHONY : ChatGrpcClient.s
+
+# target to generate assembly for a file
+ChatGrpcClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/ChatGrpcClient.cpp.s
+.PHONY : ChatGrpcClient.cpp.s
+
 ChatServer.o: ChatServer.cpp.o
 .PHONY : ChatServer.o
 
@@ -321,6 +345,30 @@ TcpLogicSystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/TcpLogicSystem.cpp.s
 .PHONY : TcpLogicSystem.cpp.s
 
+UserMgr.o: UserMgr.cpp.o
+.PHONY : UserMgr.o
+
+# target to build an object file
+UserMgr.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/UserMgr.cpp.o
+.PHONY : UserMgr.cpp.o
+
+UserMgr.i: UserMgr.cpp.i
+.PHONY : UserMgr.i
+
+# target to preprocess a source file
+UserMgr.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/UserMgr.cpp.i
+.PHONY : UserMgr.cpp.i
+
+UserMgr.s: UserMgr.cpp.s
+.PHONY : UserMgr.s
+
+# target to generate assembly for a file
+UserMgr.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/UserMgr.cpp.s
+.PHONY : UserMgr.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -432,6 +480,9 @@ help:
 	@echo "... CSession.o"
 	@echo "... CSession.i"
 	@echo "... CSession.s"
+	@echo "... ChatGrpcClient.o"
+	@echo "... ChatGrpcClient.i"
+	@echo "... ChatGrpcClient.s"
 	@echo "... ChatServer.o"
 	@echo "... ChatServer.i"
 	@echo "... ChatServer.s"
@@ -450,6 +501,9 @@ help:
 	@echo "... TcpLogicSystem.o"
 	@echo "... TcpLogicSystem.i"
 	@echo "... TcpLogicSystem.s"
+	@echo "... UserMgr.o"
+	@echo "... UserMgr.i"
+	@echo "... UserMgr.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

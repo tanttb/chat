@@ -2,6 +2,7 @@
 #include "const.h"
 #include "MsgNode.h"
 #include "CSession.h"
+#include "userdata.h"
 
 typedef std::function<void(std::shared_ptr<MsgNode>)> callback;
 
@@ -12,14 +13,16 @@ class TcpLogicSystem : public Singleton<TcpLogicSystem>{
       ~TcpLogicSystem();
 
       void PushTask(std::shared_ptr<MsgNode>);
-
+      void DealMsg();
+      void Close();
+      
    private:
 
       void HandLogin(std::shared_ptr<MsgNode>);
 
-
-      void Close();
-      void DealMsg();
+      bool GetBaseInfo(std::string, int, std::shared_ptr<UserInfo>);
+      
+      
       void initHandler();
       std::shared_ptr<MsgNode> GetTask();
 

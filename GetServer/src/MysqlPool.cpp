@@ -18,7 +18,7 @@ void MysqlPool::CheckConnection(){
          std::unique_ptr<sql::Statement> stmt = std::unique_ptr<sql::Statement>(con->_con->createStatement());
          stmt->executeQuery("select 1");
          con->_last_time = timesp;
-         LOG_INFO("Execute Timer Alive Query");
+         // LOG_INFO("Execute Timer Alive Query");
 
       }catch(sql::SQLException &e){
          LOG_ERROR("Error Keeping Connection Alive: " << e.what());

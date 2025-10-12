@@ -1,4 +1,4 @@
-#include "StatusGrpcClient.h"
+#include "./../include/StatusGrpcClient.h"
 
 StatusConPool::StatusConPool(size_t pool_size, std::string host, std::string port):
 _poolsize(pool_size), _host(host), _port(port), _b_stop(false)

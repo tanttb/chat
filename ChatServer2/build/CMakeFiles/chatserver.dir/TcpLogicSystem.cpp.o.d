@@ -1,8 +1,8 @@
 CMakeFiles/chatserver.dir/TcpLogicSystem.cpp.o: \
- /home/tan/chat/ChatServer/src/TcpLogicSystem.cpp \
+ /home/tan/chat/ChatServer2/src/TcpLogicSystem.cpp \
  /usr/include/stdc-predef.h \
- /home/tan/chat/ChatServer/src/../include/TcpLogicSystem.h \
- /home/tan/chat/ChatServer/src/../include/const.h \
+ /home/tan/chat/ChatServer2/src/../include/TcpLogicSystem.h \
+ /home/tan/chat/ChatServer2/src/../include/const.h \
  /usr/include/boost/beast/http.hpp \
  /usr/include/boost/beast/core/detail/config.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
@@ -2233,14 +2233,31 @@ CMakeFiles/chatserver.dir/TcpLogicSystem.cpp.o: \
  /usr/include/c++/13/bits/stl_queue.h /usr/include/hiredis/hiredis.h \
  /usr/include/hiredis/read.h /usr/include/hiredis/sds.h \
  /usr/include/hiredis/alloc.h \
- /home/tan/chat/ChatServer/src/../include/utils.h \
- /home/tan/chat/ChatServer/src/../include/Singleton.h \
- /home/tan/chat/ChatServer/src/../include/ConfigMgr.h \
- /home/tan/chat/ChatServer/src/../include/MsgNode.h \
- /home/tan/chat/ChatServer/src/../include/ChatServer.h \
- /home/tan/chat/ChatServer/src/../include/CSession.h \
- /home/tan/chat/ChatServer/src/../include/redisMgr.h \
- /home/tan/chat/ChatServer/src/../include/StatusGrpcClient.h \
+ /home/tan/chat/ChatServer2/src/../include/utils.h \
+ /home/tan/chat/ChatServer2/src/../include/Singleton.h \
+ /home/tan/chat/ChatServer2/src/../include/ConfigMgr.h \
+ /home/tan/chat/ChatServer2/src/../include/MsgNode.h \
+ /home/tan/chat/ChatServer2/src/../include/ChatServer.h \
+ /home/tan/chat/ChatServer2/src/../include/CSession.h \
+ /home/tan/chat/ChatServer2/src/../include/userdata.h \
+ /home/tan/chat/ChatServer2/src/../include/redisMgr.h \
+ /home/tan/chat/ChatServer2/src/../include/MysqlMgr.h \
+ /home/tan/chat/ChatServer2/src/../include/MysqlPool.h \
+ /usr/include/c++/13/thread /usr/include/mysql_driver.h \
+ /usr/include/boost/scoped_ptr.hpp \
+ /usr/include/boost/smart_ptr/scoped_ptr.hpp \
+ /usr/include/cppconn/driver.h /usr/include/cppconn/connection.h \
+ /usr/include/cppconn/build_config.h /usr/include/cppconn/warning.h \
+ /usr/include/cppconn/sqlstring.h /usr/include/cppconn/variant.h \
+ /usr/include/cppconn/exception.h /usr/include/mysql_connection.h \
+ /usr/include/cppconn/connection.h \
+ /usr/include/cppconn/prepared_statement.h \
+ /usr/include/cppconn/statement.h /usr/include/cppconn/config.h \
+ /usr/include/inttypes.h /usr/include/cppconn/resultset.h \
+ /usr/include/cppconn/resultset_metadata.h \
+ /usr/include/cppconn/datatype.h /usr/include/cppconn/resultset.h \
+ /usr/include/cppconn/statement.h /usr/include/cppconn/exception.h \
+ /home/tan/chat/ChatServer2/src/../include/StatusGrpcClient.h \
  /usr/include/grpcpp/grpcpp.h /usr/include/grpc/grpc.h \
  /usr/include/grpc/support/port_platform.h \
  /usr/include/grpc/impl/codegen/port_platform.h \
@@ -2355,8 +2372,8 @@ CMakeFiles/chatserver.dir/TcpLogicSystem.cpp.o: \
  /usr/include/grpcpp/impl/server_builder_plugin.h \
  /usr/include/grpcpp/security/authorization_policy_provider.h \
  /usr/include/grpcpp/server_posix.h /usr/include/grpcpp/version_info.h \
- /home/tan/chat/ChatServer/src/../include/message.grpc.pb.h \
- /home/tan/chat/ChatServer/src/../include/message.pb.h \
+ /home/tan/chat/ChatServer2/src/../include/message.grpc.pb.h \
+ /home/tan/chat/ChatServer2/src/../include/message.pb.h \
  /usr/include/google/protobuf/port_def.inc \
  /usr/include/google/protobuf/port_undef.inc \
  /usr/include/google/protobuf/io/coded_stream.h \
@@ -2433,4 +2450,5 @@ CMakeFiles/chatserver.dir/TcpLogicSystem.cpp.o: \
  /usr/include/grpcpp/impl/codegen/proto_buffer_writer.h \
  /usr/include/grpcpp/support/proto_buffer_writer.h \
  /usr/include/grpcpp/impl/codegen/serialization_traits.h \
- /usr/include/grpcpp/support/stub_options.h
+ /usr/include/grpcpp/support/stub_options.h \
+ /home/tan/chat/ChatServer2/src/../include/UserMgr.h

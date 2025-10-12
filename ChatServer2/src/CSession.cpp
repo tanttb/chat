@@ -7,7 +7,7 @@ _socket(ioc), _b_stop(false), _parse_head(false), _server(server)
 {
    // Constructor body can be left empty or add initialization code here if needed
    boost::uuids::uuid id = boost::uuids::random_generator()();
-   _uid = boost::uuids::to_string(id);
+   _session_uid = boost::uuids::to_string(id);
    _data = std::make_shared<MsgNode>(MAX_DATA_LENGTH);
 
 }
@@ -17,9 +17,19 @@ tcp::socket& CSession::getSocket()
    return _socket;
 }
 
-std::string CSession::getUid()
+std::string CSession::getSessionUid()
 {
-   return _uid;
+   return _session_uid;
+}
+
+void CSession::SetUserId(int id)
+{
+   _user_id = id;
+}
+
+int CSession::GetUserId()
+{
+   return _user_id;
 }
 
 void CSession::Start()

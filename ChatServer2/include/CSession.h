@@ -14,7 +14,10 @@ class CSession:public std::enable_shared_from_this<CSession>{
       CSession(boost::asio::io_context&, ChatServer*);
 
       tcp::socket& getSocket();
-      std::string getUid();
+      std::string getSessionUid();
+
+      void SetUserId(int);
+      int GetUserId();
       void Start();
       void Send(std::string, short msgid);
 
@@ -28,7 +31,8 @@ class CSession:public std::enable_shared_from_this<CSession>{
       tcp::socket _socket;
       bool _b_stop;
       bool _parse_head;
-      std::string _uid;
+      int _user_id;
+      std::string _session_uid;
       std::shared_ptr<MsgNode> _data;
       std::queue<std::shared_ptr<SendNode>> _send_queue;
       std::mutex _recv_mutex;

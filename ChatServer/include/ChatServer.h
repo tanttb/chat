@@ -12,8 +12,9 @@ class ChatServer : public std::enable_shared_from_this<ChatServer>{
       void ClearSession(std::string);
       void HandleAccept(std::shared_ptr<CSession>, const boost::system::error_code &er);
 
-   private:
+   
       void StartAccept();
+   private:
       net::io_context &_ioc;
       tcp::acceptor _acceptor;
       std::map<std::string, std::shared_ptr<CSession>> _tcpconnects;

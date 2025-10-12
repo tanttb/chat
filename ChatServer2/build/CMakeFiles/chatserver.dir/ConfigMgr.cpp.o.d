@@ -1,7 +1,7 @@
 CMakeFiles/chatserver.dir/ConfigMgr.cpp.o: \
- /home/tan/chat/ChatServer/src/ConfigMgr.cpp /usr/include/stdc-predef.h \
- /home/tan/chat/ChatServer/src/../include/ConfigMgr.h \
- /home/tan/chat/ChatServer/src/../include/const.h \
+ /home/tan/chat/ChatServer2/src/ConfigMgr.cpp /usr/include/stdc-predef.h \
+ /home/tan/chat/ChatServer2/src/../include/ConfigMgr.h \
+ /home/tan/chat/ChatServer2/src/../include/const.h \
  /usr/include/boost/beast/http.hpp \
  /usr/include/boost/beast/core/detail/config.hpp \
  /usr/include/boost/config.hpp /usr/include/boost/config/user.hpp \
@@ -2232,5 +2232,5 @@ CMakeFiles/chatserver.dir/ConfigMgr.cpp.o: \
  /usr/include/c++/13/bits/stl_queue.h /usr/include/hiredis/hiredis.h \
  /usr/include/hiredis/read.h /usr/include/hiredis/sds.h \
  /usr/include/hiredis/alloc.h \
- /home/tan/chat/ChatServer/src/../include/utils.h \
- /home/tan/chat/ChatServer/src/../include/Singleton.h
+ /home/tan/chat/ChatServer2/src/../include/utils.h \
+ /home/tan/chat/ChatServer2/src/../include/Singleton.h

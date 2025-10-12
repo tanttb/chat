@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/tan/chat/ChatServer/src
+CMAKE_SOURCE_DIR = /home/tan/chat/ChatServer2/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/tan/chat/ChatServer/build
+CMAKE_BINARY_DIR = /home/tan/chat/ChatServer2/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tan/chat/ChatServer/build/CMakeFiles /home/tan/chat/ChatServer/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tan/chat/ChatServer2/build/CMakeFiles /home/tan/chat/ChatServer2/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/tan/chat/ChatServer/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tan/chat/ChatServer2/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,6 +177,30 @@ CSession.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/CSession.cpp.s
 .PHONY : CSession.cpp.s
 
+ChatGrpcClient.o: ChatGrpcClient.cpp.o
+.PHONY : ChatGrpcClient.o
+
+# target to build an object file
+ChatGrpcClient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/ChatGrpcClient.cpp.o
+.PHONY : ChatGrpcClient.cpp.o
+
+ChatGrpcClient.i: ChatGrpcClient.cpp.i
+.PHONY : ChatGrpcClient.i
+
+# target to preprocess a source file
+ChatGrpcClient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/ChatGrpcClient.cpp.i
+.PHONY : ChatGrpcClient.cpp.i
+
+ChatGrpcClient.s: ChatGrpcClient.cpp.s
+.PHONY : ChatGrpcClient.s
+
+# target to generate assembly for a file
+ChatGrpcClient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/ChatGrpcClient.cpp.s
+.PHONY : ChatGrpcClient.cpp.s
+
 ChatServer.o: ChatServer.cpp.o
 .PHONY : ChatServer.o
 
@@ -200,6 +224,30 @@ ChatServer.s: ChatServer.cpp.s
 ChatServer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/ChatServer.cpp.s
 .PHONY : ChatServer.cpp.s
+
+ChatServiceImpl.o: ChatServiceImpl.cpp.o
+.PHONY : ChatServiceImpl.o
+
+# target to build an object file
+ChatServiceImpl.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/ChatServiceImpl.cpp.o
+.PHONY : ChatServiceImpl.cpp.o
+
+ChatServiceImpl.i: ChatServiceImpl.cpp.i
+.PHONY : ChatServiceImpl.i
+
+# target to preprocess a source file
+ChatServiceImpl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/ChatServiceImpl.cpp.i
+.PHONY : ChatServiceImpl.cpp.i
+
+ChatServiceImpl.s: ChatServiceImpl.cpp.s
+.PHONY : ChatServiceImpl.s
+
+# target to generate assembly for a file
+ChatServiceImpl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/ChatServiceImpl.cpp.s
+.PHONY : ChatServiceImpl.cpp.s
 
 ConfigMgr.o: ConfigMgr.cpp.o
 .PHONY : ConfigMgr.o
@@ -321,6 +369,30 @@ TcpLogicSystem.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/TcpLogicSystem.cpp.s
 .PHONY : TcpLogicSystem.cpp.s
 
+UserMgr.o: UserMgr.cpp.o
+.PHONY : UserMgr.o
+
+# target to build an object file
+UserMgr.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/UserMgr.cpp.o
+.PHONY : UserMgr.cpp.o
+
+UserMgr.i: UserMgr.cpp.i
+.PHONY : UserMgr.i
+
+# target to preprocess a source file
+UserMgr.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/UserMgr.cpp.i
+.PHONY : UserMgr.cpp.i
+
+UserMgr.s: UserMgr.cpp.s
+.PHONY : UserMgr.s
+
+# target to generate assembly for a file
+UserMgr.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chatserver.dir/build.make CMakeFiles/chatserver.dir/UserMgr.cpp.s
+.PHONY : UserMgr.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -432,9 +504,15 @@ help:
 	@echo "... CSession.o"
 	@echo "... CSession.i"
 	@echo "... CSession.s"
+	@echo "... ChatGrpcClient.o"
+	@echo "... ChatGrpcClient.i"
+	@echo "... ChatGrpcClient.s"
 	@echo "... ChatServer.o"
 	@echo "... ChatServer.i"
 	@echo "... ChatServer.s"
+	@echo "... ChatServiceImpl.o"
+	@echo "... ChatServiceImpl.i"
+	@echo "... ChatServiceImpl.s"
 	@echo "... ConfigMgr.o"
 	@echo "... ConfigMgr.i"
 	@echo "... ConfigMgr.s"
@@ -450,6 +528,9 @@ help:
 	@echo "... TcpLogicSystem.o"
 	@echo "... TcpLogicSystem.i"
 	@echo "... TcpLogicSystem.s"
+	@echo "... UserMgr.o"
+	@echo "... UserMgr.i"
+	@echo "... UserMgr.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -293,6 +293,7 @@ CMakeFiles/chatserver.dir/MysqlMgr.cpp.o: \
  /usr/include/cppconn/resultset_metadata.h \
  /usr/include/cppconn/datatype.h /usr/include/cppconn/resultset.h \
  /usr/include/cppconn/statement.h /usr/include/cppconn/exception.h \
+ /home/tan/chat/ChatServer/src/../include/userdata.h \
  /home/tan/chat/ChatServer/src/../include/const.h \
  /usr/include/boost/beast/http.hpp \
  /usr/include/boost/beast/core/detail/config.hpp \

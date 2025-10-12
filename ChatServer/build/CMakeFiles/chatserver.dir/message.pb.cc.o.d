@@ -1,7 +1,6 @@
 CMakeFiles/chatserver.dir/message.pb.cc.o: \
  /home/tan/chat/ChatServer/src/message.pb.cc /usr/include/stdc-predef.h \
- /home/tan/chat/ChatServer/src/../include/message.pb.h \
- /usr/include/c++/13/limits \
+ /home/tan/chat/ChatServer/src/message.pb.h /usr/include/c++/13/limits \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \

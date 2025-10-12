@@ -7,7 +7,7 @@ _socket(ioc), _b_stop(false), _parse_head(false), _server(server)
 {
    // Constructor body can be left empty or add initialization code here if needed
    boost::uuids::uuid id = boost::uuids::random_generator()();
-   _uid = boost::uuids::to_string(id);
+   _session_uid = boost::uuids::to_string(id);
    _data = std::make_shared<MsgNode>(MAX_DATA_LENGTH);
 
 }
@@ -17,9 +17,19 @@ tcp::socket& CSession::getSocket()
    return _socket;
 }
 
-std::string CSession::getUid()
+std::string CSession::getSessionUid()
 {
-   return _uid;
+   return _session_uid;
+}
+
+void CSession::SetUserId(int id)
+{
+   _user_id = id;
+}
+
+int CSession::GetUserId()
+{
+   return _user_id;
 }
 
 void CSession::Start()
@@ -36,7 +46,7 @@ void CSession::AsyncRead(int len, std::function<void(boost::system::error_code e
 void CSession::AsyncReadHead()
 {
    auto self = shared_from_this();
-   _data->clear();
+
    _data->_session = shared_from_this();
    auto handler = [self](boost::system::error_code ec, std::size_t read_len){
       try{
@@ -59,7 +69,7 @@ void CSession::AsyncReadHead()
          if(msgid > MAX_DATA_LENGTH){
             LOG_ERROR("Read Head Msglen > MAX_DATA_LEN ");
          }
-
+         self->_data->clear();
          self->AsyncReadBody();
       }catch(std::exception &e){
          LOG_ERROR("Exception: e " << e.what());
@@ -74,7 +84,7 @@ void CSession::AsyncReadHead()
 void CSession::AsyncReadBody()
 {
    auto self = shared_from_this();
-   _data->clear();
+   
 
    auto handler = [self](boost::system::error_code ec, std::size_t read_len){
       if(ec){
@@ -85,6 +95,7 @@ void CSession::AsyncReadBody()
       
       LOG_INFO("Read Body: " << self->_data->_body);
       TcpLogicSystem::GetInstance()->PushTask(std::make_shared<MsgNode>(*(self->_data)));
+      self->_data->clear();
       self->AsyncReadHead();
    };
 

@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/message.grpc.pb.cc.o.d"
   "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/message.pb.cc.o"
   "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/message.pb.cc.o.d"
+  "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o"
+  "CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o.d"
   "stutsServer"
   "stutsServer.pdb"
 )

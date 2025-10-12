@@ -225,6 +225,30 @@ home/tan/chat/GetServer/src/message.pb.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/stutsServer.dir/build.make CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/message.pb.cc.s
 .PHONY : home/tan/chat/GetServer/src/message.pb.cc.s
 
+home/tan/chat/GetServer/src/redisMgr.o: home/tan/chat/GetServer/src/redisMgr.cpp.o
+.PHONY : home/tan/chat/GetServer/src/redisMgr.o
+
+# target to build an object file
+home/tan/chat/GetServer/src/redisMgr.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stutsServer.dir/build.make CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.o
+.PHONY : home/tan/chat/GetServer/src/redisMgr.cpp.o
+
+home/tan/chat/GetServer/src/redisMgr.i: home/tan/chat/GetServer/src/redisMgr.cpp.i
+.PHONY : home/tan/chat/GetServer/src/redisMgr.i
+
+# target to preprocess a source file
+home/tan/chat/GetServer/src/redisMgr.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stutsServer.dir/build.make CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.i
+.PHONY : home/tan/chat/GetServer/src/redisMgr.cpp.i
+
+home/tan/chat/GetServer/src/redisMgr.s: home/tan/chat/GetServer/src/redisMgr.cpp.s
+.PHONY : home/tan/chat/GetServer/src/redisMgr.s
+
+# target to generate assembly for a file
+home/tan/chat/GetServer/src/redisMgr.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stutsServer.dir/build.make CMakeFiles/stutsServer.dir/home/tan/chat/GetServer/src/redisMgr.cpp.s
+.PHONY : home/tan/chat/GetServer/src/redisMgr.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,6 +270,9 @@ help:
 	@echo "... home/tan/chat/GetServer/src/message.pb.o"
 	@echo "... home/tan/chat/GetServer/src/message.pb.i"
 	@echo "... home/tan/chat/GetServer/src/message.pb.s"
+	@echo "... home/tan/chat/GetServer/src/redisMgr.o"
+	@echo "... home/tan/chat/GetServer/src/redisMgr.i"
+	@echo "... home/tan/chat/GetServer/src/redisMgr.s"
 .PHONY : help
 
 
